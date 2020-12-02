@@ -1,0 +1,50 @@
+.size-img {
+    margin: 10px 0px;
+    width: 100%;
+    height: 350px;
+}
+
+.name-design {
+    color: blue;
+    font-weight: bolder;
+}
+
+.device {
+    font-weight: bolder;
+}
+
+.link-product {
+    border: 0.5px solid red;
+    font-size: 0.75em;
+    margin-top: 8px;
+    height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+
+.link-product a {
+    text-decoration: none;
+}
+
+.link-product:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.price-now {
+    margin: 10px 0px;
+    font-size: 0.75;
+}
+
+.price-sale {
+    font-weight: bold;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+.img-product {
+    width: 100%;
+    height: 400px;
+}

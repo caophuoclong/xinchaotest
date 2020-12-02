@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container" style="font-size: 0.75em">
+            <a class="navbar-brand" href="#">TechStore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="product.html">Sản Phẩm</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="gopy.html">Góp ý</a>
+
+                    </li>
+                </ul>
+                <div class="search">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                    </form>
+                </div>
+
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="login.html">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="app">
+        <h1>Liên hệ</h1>
+        <div class="alert alert-danger" role="alert" v-if="checkLoi()">
+            <ul>
+                <li v-for="er in errors">
+
+                    {{ er }}
+
+                </li>
+            </ul>
+        </div>
+        <div class="alert alert-success" role="alert" v-if="checkLoi1()">
+            Bạn đã góp ý thành công
+        </div>
+        <form action="#" name="frmLienHe" id="frmLienHe" novalidate="true" @submit="validateData">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtHoTen">Họ Tên</label>
+                        <input type="text" class="form-control" id="txtHoTen" v-model="hoten">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtEmail">Email</label>
+                        <input type="email" class="form-control" id="txtEmail" v-model="email">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtSDT">Số điện thoại</label>
+                        <input type="text" class="form-control" id="txtSDT" v-model="sodienthoai">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="txtLoiNhan">Lời nhắn</label>
+                    <textarea name="txtLoiNhan" id="txtLoiNhan" class="form-control" v-model="loinhan"></textarea>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary" id="btnSubmit" name="btnSubmit">Gửi dữ liệu</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/vuejs/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                errors: [],
+                isVali: false,
+                hoten: "",
+                email: "",
+                sodienthoai: "",
+                loinhan: "",
+            },
+            methods: {
+                validateData: function(e) {
+                    e.preventDefault();
+
+                    this.errors = [];
+                    this.isVali = false;
+                    if (this.hoten == "") {
+                        this.errors.push('Vui lòng nhập Họ tên');
+                    } else if (this.hoten.length < 5) { // Kiểm tra độ dài
+                        this.errors.push('Vui lòng nhập Họ tên 5 ký tự trở lên');
+                    }
+
+                    // Validate Email
+                    // Kiểm tra rỗng
+                    if (this.email == "") {
+                        this.errors.push('Vui lòng nhập địa chỉ Email');
+                    } else if (this.email.length < 5) { // Kiểm tra độ dài
+                        this.errors.push('Vui lòng nhập địa chỉ Email 5 ký tự trở lên');
+                    }
+                    // Validate Số điện thoại
+                    // Kiểm tra rỗng
+                    if (this.sodienthoai == "") {
+                        this.errors.push('Vui lòng nhập số điện thoại');
+                    } else if (this.sodienthoai.length < 5) { // Kiểm tra độ dài
+                        this.errors.push('Vui lòng nhập số điện thoại 5 ký tự trở lên');
+                    }
+
+                    // Validate Lời nhắn
+                    // Kiểm tra rỗng
+                    if (this.loinhan == "") {
+                        this.errors.push('Vui lòng nhập lời nhắn');
+                    } else if (this.loinhan.length < 5) { // Kiểm tra độ dài
+                        this.errors.push('Vui lòng nhập lời nhắn 5 ký tự trở lên');
+                    }
+                    this.isVali = true;
+                    return false;
+                },
+                checkLoi: function() {
+                    if (this.errors.length == 0)
+                        return false;
+                    else
+                        return true;
+                },
+                checkLoi1: function() {
+                    if (this.isVali == false)
+                        return false;
+                    if (this.errors.length == 0)
+                        return true;
+                    else
+                        return false;
+                }
+
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
