@@ -9,182 +9,61 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <style>
-        .descrip {
-            text-align: left;
+        body {
+            width: 100%;
         }
         
-        .xinchao {
+        .container {
+            border: 0 none;
+        }
+        
+        #gioithieu {
+            font-size: larger;
+        }
+        
+        col {
+            border: 1px solid;
+        }
+        
+        a:blur {
+            outline: none;
+        }
+        
+        a {
+            border: 1px solid #000000;
+            border-radius: 10%;
+            outline: none;
+        }
+        
+        #head2 {
             text-align: center;
-        }
-        
-        div {
-            border: 0px solid red;
-        }
-        
-        .marketing {
-            text-align: center;
-        }
-        
-        .xxxy {
-            padding: 65px 0px;
         }
     </style>
 </head>
 
 <body>
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container" style="font-size: 0.75em">
-            <a class="navbar-brand" href="#">TechStore</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="product.html">Sản Phẩm</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="contact.html">Liên hệ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="gopy.html">Góp ý</a>
-
-                    </li>
-                </ul>
-                <div class="search">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-                    </form>
-                </div>
-
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="login.html">Đăng nhập</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 px-0">
-                            <div class="carousel-caption d-none d-md-block" style="font-size: 2.5em;">
-                                <h3 class="descrip">Nền Tảng - Nơi mua sắm tuyệt vời</h3>
-                            </div>
-                            <img class=" size-img" src="assets/img/slider/oppo.jpeg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 px-0">
-                            <img class=" size-img" src="assets/img/slider/xiaomi.jpeg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 px-0">
-                            <img class=" size-img" src="assets/img/slider/laptop.jpeg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <div class="container introduction">
-        <div class="row">
-            <div class="col-md-4 xinchao">
-                <img src="assets/img/icon/icon-1.png" alt="">
-
-                <h3>Đặt hàng</h3>
-                <h5>Chọn sản phẩm bạn yêu thích và đặt hàng</h5>
-            </div>
-            <div class="col-md-4 xinchao">
-                <img src="assets/img/icon/icon-2.png" alt="">
-                <h3>Tạo đơn hàng</h3>
-                <h5>Theo dõi đơn hàng của bạn</h5>
-            </div>
-            <div class="col-md-4 xinchao">
-                <img src="assets/img/icon/icon-3.png" alt="">
-                <h3>Giao hàng</h3>
-                <h5>Giao hàng tận nơi</h5>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 100px">
-            <div class="col-md-8 text-center description">
-                <h3>Đặt hàng. Tạo đơn hàng, <br> Giao hàng nhanh chóng</h3>
-                <h5>Nơi mua sắm tuyệt vời cho mọi lứa tuổi</h5>
-            </div>
-            <div class="col-md-4">
-                <img class="img-fluid" src="assets/img/marketing/marketing-1.png" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img class="img-fluid" src="assets/img/marketing/marketing-2.png" alt="">
-            </div>
-            <div class="col-md-8 text-center description">
-                <h3>Báo cáo danh thu tuyệt vời <br /> Theo dõi đơn hàng của bạn.</h3>
-                <h5>Hệ thống theo dõi đơn hàng chi tiết mọi lúc mọi nơi</h5>
-            </div>
-        </div>
-
-    </div>
-    <div class="container-fluid" style="margin-top: 30px; margin-bottom: 30px;">
-        <div class="row">
-            <div class="col-md-12 text-center bg-secondary xxxy" style="height:200px">
-                <h3>Danh sách sản phẩm</h3>
-                <h5>Các sản phẩm với chất lượng, uy tín, cam kết từ nhà sản xuất, phân phối và bảo hành chính hãng</h5>
-            </div>
-        </div>
-    </div>
-
-    <footer class="blockquote-footer" style="margin-top: 50px;">
+    <marquee id="gioithieu">Trần Cao Phước Long</marquee>
+    <div class="container-fluid">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    Copyright &copy; <a href="https://nentang.vn">Nen Tang</a> - 2019. Hanh trang toi tuong lai
+            <div class="row" style="text-align: center;">
+                <div class="col">
+                    <a href="khht.html">Kế hoạch học tập</a>
                 </div>
-                <div class="col-md-2">
-                    <a href="#">Back to top</a>
+                <div class="col">
+                    <a href="lichthi.html">Lịch thi</a>
+                </div>
+                <div class="col">
+                    <a href="tkb.html">Thời khóa biểu</a>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col" id="head2">
+                    <a href="cautruc.html">Lý thuyết cấu trúc dữ liệu</a>
                 </div>
             </div>
         </div>
-    </footer>
-
-
-
-
-
-
-
-
+    </div>
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.js"></script>

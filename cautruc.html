@@ -1,0 +1,3765 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Lý thuyết cấu trúc dữ liệu</title>t>
+    <style type="text/css">
+        ol.lst-kix_list_7-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_14-1>li:before {
+            content: "" counter(lst-ctn-kix_list_14-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_14-3>li:before {
+            content: "" counter(lst-ctn-kix_list_14-3, decimal) ". "
+        }
+        
+        .lst-kix_list_2-1>li {
+            counter-increment: lst-ctn-kix_list_2-1
+        }
+        
+        ol.lst-kix_list_15-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_15-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_15-8 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-0.start {
+            counter-reset: lst-ctn-kix_list_9-0 0
+        }
+        
+        .lst-kix_list_14-0>li:before {
+            content: "" counter(lst-ctn-kix_list_14-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_14-4>li:before {
+            content: "" counter(lst-ctn-kix_list_14-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_15-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_15-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_15-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_18-5.start {
+            counter-reset: lst-ctn-kix_list_18-5 0
+        }
+        
+        .lst-kix_list_6-1>li {
+            counter-increment: lst-ctn-kix_list_6-1
+        }
+        
+        .lst-kix_list_14-5>li:before {
+            content: "" counter(lst-ctn-kix_list_14-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_14-7>li:before {
+            content: "" counter(lst-ctn-kix_list_14-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_15-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_15-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-4.start {
+            counter-reset: lst-ctn-kix_list_13-4 0
+        }
+        
+        .lst-kix_list_14-6>li:before {
+            content: "" counter(lst-ctn-kix_list_14-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_15-1 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_13-0>li {
+            counter-increment: lst-ctn-kix_list_13-0
+        }
+        
+        ol.lst-kix_list_7-4.start {
+            counter-reset: lst-ctn-kix_list_7-4 0
+        }
+        
+        .lst-kix_list_17-0>li {
+            counter-increment: lst-ctn-kix_list_17-0
+        }
+        
+        .lst-kix_list_5-0>li {
+            counter-increment: lst-ctn-kix_list_5-0
+        }
+        
+        .lst-kix_list_9-0>li {
+            counter-increment: lst-ctn-kix_list_9-0
+        }
+        
+        ol.lst-kix_list_2-3.start {
+            counter-reset: lst-ctn-kix_list_2-3 0
+        }
+        
+        ol.lst-kix_list_7-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-8 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_11-8.start {
+            counter-reset: lst-ctn-kix_list_11-8 0
+        }
+        
+        ol.lst-kix_list_7-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_14-2>li:before {
+            content: "" counter(lst-ctn-kix_list_14-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_5-3.start {
+            counter-reset: lst-ctn-kix_list_5-3 0
+        }
+        
+        ol.lst-kix_list_12-0.start {
+            counter-reset: lst-ctn-kix_list_12-0 5
+        }
+        
+        .lst-kix_list_4-3>li {
+            counter-increment: lst-ctn-kix_list_4-3
+        }
+        
+        ol.lst-kix_list_17-1.start {
+            counter-reset: lst-ctn-kix_list_17-1 0
+        }
+        
+        ol.lst-kix_list_3-7.start {
+            counter-reset: lst-ctn-kix_list_3-7 0
+        }
+        
+        .lst-kix_list_14-8>li:before {
+            content: "" counter(lst-ctn-kix_list_14-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_18-8>li {
+            counter-increment: lst-ctn-kix_list_18-8
+        }
+        
+        ol.lst-kix_list_8-8.start {
+            counter-reset: lst-ctn-kix_list_8-8 0
+        }
+        
+        .lst-kix_list_3-2>li {
+            counter-increment: lst-ctn-kix_list_3-2
+        }
+        
+        ol.lst-kix_list_15-5.start {
+            counter-reset: lst-ctn-kix_list_15-5 0
+        }
+        
+        ol.lst-kix_list_10-4.start {
+            counter-reset: lst-ctn-kix_list_10-4 0
+        }
+        
+        .lst-kix_list_7-2>li {
+            counter-increment: lst-ctn-kix_list_7-2
+        }
+        
+        .lst-kix_list_5-0>li:before {
+            content: "" counter(lst-ctn-kix_list_5-0, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_6-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_6-1 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_14-8>li {
+            counter-increment: lst-ctn-kix_list_14-8
+        }
+        
+        .lst-kix_list_5-4>li {
+            counter-increment: lst-ctn-kix_list_5-4
+        }
+        
+        ol.lst-kix_list_16-5 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_1-4>li {
+            counter-increment: lst-ctn-kix_list_1-4
+        }
+        
+        ol.lst-kix_list_16-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_16-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_1-6.start {
+            counter-reset: lst-ctn-kix_list_1-6 0
+        }
+        
+        ol.lst-kix_list_16-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-3>li:before {
+            content: "" counter(lst-ctn-kix_list_5-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_9-5.start {
+            counter-reset: lst-ctn-kix_list_9-5 0
+        }
+        
+        ol.lst-kix_list_16-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_16-2 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-2>li:before {
+            content: "" counter(lst-ctn-kix_list_5-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_16-3 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_8-3>li {
+            counter-increment: lst-ctn-kix_list_8-3
+        }
+        
+        ol.lst-kix_list_16-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-1>li:before {
+            content: "" counter(lst-ctn-kix_list_5-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_18-0.start {
+            counter-reset: lst-ctn-kix_list_18-0 0
+        }
+        
+        ol.lst-kix_list_16-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-7>li:before {
+            content: "" counter(lst-ctn-kix_list_5-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_5-6>li:before {
+            content: "" counter(lst-ctn-kix_list_5-6, decimal) ". "
+        }
+        
+        .lst-kix_list_5-8>li:before {
+            content: "" counter(lst-ctn-kix_list_5-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_9-4>li {
+            counter-increment: lst-ctn-kix_list_9-4
+        }
+        
+        ol.lst-kix_list_6-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_6-7 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-4>li:before {
+            content: "" counter(lst-ctn-kix_list_5-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_6-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-5>li:before {
+            content: "" counter(lst-ctn-kix_list_5-5, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_6-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_6-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_6-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_16-4.start {
+            counter-reset: lst-ctn-kix_list_16-4 0
+        }
+        
+        ol.lst-kix_list_6-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_14-1.start {
+            counter-reset: lst-ctn-kix_list_14-1 0
+        }
+        
+        ol.lst-kix_list_12-5.start {
+            counter-reset: lst-ctn-kix_list_12-5 0
+        }
+        
+        .lst-kix_list_6-1>li:before {
+            content: "" counter(lst-ctn-kix_list_6-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_6-3>li:before {
+            content: "" counter(lst-ctn-kix_list_6-3, decimal) ". "
+        }
+        
+        .lst-kix_list_6-5>li {
+            counter-increment: lst-ctn-kix_list_6-5
+        }
+        
+        .lst-kix_list_6-8>li {
+            counter-increment: lst-ctn-kix_list_6-8
+        }
+        
+        .lst-kix_list_6-0>li:before {
+            content: "" counter(lst-ctn-kix_list_6-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_6-4>li:before {
+            content: "" counter(lst-ctn-kix_list_6-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_14-8.start {
+            counter-reset: lst-ctn-kix_list_14-8 0
+        }
+        
+        .lst-kix_list_3-6>li {
+            counter-increment: lst-ctn-kix_list_3-6
+        }
+        
+        .lst-kix_list_6-2>li:before {
+            content: "" counter(lst-ctn-kix_list_6-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_15-0.start {
+            counter-reset: lst-ctn-kix_list_15-0 0
+        }
+        
+        .lst-kix_list_2-5>li {
+            counter-increment: lst-ctn-kix_list_2-5
+        }
+        
+        .lst-kix_list_2-8>li {
+            counter-increment: lst-ctn-kix_list_2-8
+        }
+        
+        ol.lst-kix_list_3-2.start {
+            counter-reset: lst-ctn-kix_list_3-2 0
+        }
+        
+        .lst-kix_list_6-8>li:before {
+            content: "" counter(lst-ctn-kix_list_6-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_6-5>li:before {
+            content: "" counter(lst-ctn-kix_list_6-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_6-7>li:before {
+            content: "" counter(lst-ctn-kix_list_6-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_6-6>li:before {
+            content: "" counter(lst-ctn-kix_list_6-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_17-8 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_10-6.start {
+            counter-reset: lst-ctn-kix_list_10-6 0
+        }
+        
+        .lst-kix_list_7-4>li:before {
+            content: "" counter(lst-ctn-kix_list_7-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_7-6>li:before {
+            content: "" counter(lst-ctn-kix_list_7-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_17-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_18-5>li {
+            counter-increment: lst-ctn-kix_list_18-5
+        }
+        
+        ol.lst-kix_list_19-7.start {
+            counter-reset: lst-ctn-kix_list_19-7 0
+        }
+        
+        ol.lst-kix_list_17-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_6-2.start {
+            counter-reset: lst-ctn-kix_list_6-2 0
+        }
+        
+        .lst-kix_list_15-5>li {
+            counter-increment: lst-ctn-kix_list_15-5
+        }
+        
+        ol.lst-kix_list_17-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_17-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_17-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_17-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_17-2 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_7-2>li:before {
+            content: "" counter(lst-ctn-kix_list_7-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_17-3 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_7-6>li {
+            counter-increment: lst-ctn-kix_list_7-6
+        }
+        
+        .lst-kix_list_8-6>li {
+            counter-increment: lst-ctn-kix_list_8-6
+        }
+        
+        .lst-kix_list_12-6>li {
+            counter-increment: lst-ctn-kix_list_12-6
+        }
+        
+        ol.lst-kix_list_4-6.start {
+            counter-reset: lst-ctn-kix_list_4-6 0
+        }
+        
+        ol.lst-kix_list_9-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_13-7>li:before {
+            content: "" counter(lst-ctn-kix_list_13-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_3-0.start {
+            counter-reset: lst-ctn-kix_list_3-0 0
+        }
+        
+        ol.lst-kix_list_9-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-7>li {
+            counter-increment: lst-ctn-kix_list_5-7
+        }
+        
+        ol.lst-kix_list_9-5 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_7-8>li:before {
+            content: "" counter(lst-ctn-kix_list_7-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_9-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_15-6>li {
+            counter-increment: lst-ctn-kix_list_15-6
+        }
+        
+        .lst-kix_list_4-7>li {
+            counter-increment: lst-ctn-kix_list_4-7
+        }
+        
+        ol.lst-kix_list_9-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-5.start {
+            counter-reset: lst-ctn-kix_list_2-5 0
+        }
+        
+        .lst-kix_list_15-5>li:before {
+            content: "" counter(lst-ctn-kix_list_15-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_9-8>li {
+            counter-increment: lst-ctn-kix_list_9-8
+        }
+        
+        .lst-kix_list_13-4>li {
+            counter-increment: lst-ctn-kix_list_13-4
+        }
+        
+        .lst-kix_list_4-1>li:before {
+            content: "" counter(lst-ctn-kix_list_4-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_15-7>li:before {
+            content: "" counter(lst-ctn-kix_list_15-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_17-7>li {
+            counter-increment: lst-ctn-kix_list_17-7
+        }
+        
+        .lst-kix_list_4-3>li:before {
+            content: "" counter(lst-ctn-kix_list_4-3, decimal) ". "
+        }
+        
+        .lst-kix_list_4-5>li:before {
+            content: "" counter(lst-ctn-kix_list_4-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_1-8>li {
+            counter-increment: lst-ctn-kix_list_1-8
+        }
+        
+        .lst-kix_list_10-5>li {
+            counter-increment: lst-ctn-kix_list_10-5
+        }
+        
+        .lst-kix_list_15-1>li:before {
+            content: "" counter(lst-ctn-kix_list_15-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_1-4.start {
+            counter-reset: lst-ctn-kix_list_1-4 0
+        }
+        
+        .lst-kix_list_3-5>li {
+            counter-increment: lst-ctn-kix_list_3-5
+        }
+        
+        ol.lst-kix_list_1-1.start {
+            counter-reset: lst-ctn-kix_list_1-1 0
+        }
+        
+        ol.lst-kix_list_18-3.start {
+            counter-reset: lst-ctn-kix_list_18-3 0
+        }
+        
+        .lst-kix_list_15-3>li:before {
+            content: "" counter(lst-ctn-kix_list_15-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_18-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_4-4.start {
+            counter-reset: lst-ctn-kix_list_4-4 0
+        }
+        
+        ol.lst-kix_list_18-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_16-2>li {
+            counter-increment: lst-ctn-kix_list_16-2
+        }
+        
+        ol.lst-kix_list_18-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_18-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_6-4>li {
+            counter-increment: lst-ctn-kix_list_6-4
+        }
+        
+        ol.lst-kix_list_18-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_18-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-2.start {
+            counter-reset: lst-ctn-kix_list_9-2 0
+        }
+        
+        ol.lst-kix_list_16-7.start {
+            counter-reset: lst-ctn-kix_list_16-7 0
+        }
+        
+        ol.lst-kix_list_18-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_18-1 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_9-3>li {
+            counter-increment: lst-ctn-kix_list_9-3
+        }
+        
+        ol.lst-kix_list_18-2 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_11-2>li {
+            counter-increment: lst-ctn-kix_list_11-2
+        }
+        
+        ol.lst-kix_list_15-2.start {
+            counter-reset: lst-ctn-kix_list_15-2 0
+        }
+        
+        .lst-kix_list_19-2>li {
+            counter-increment: lst-ctn-kix_list_19-2
+        }
+        
+        ol.lst-kix_list_2-8.start {
+            counter-reset: lst-ctn-kix_list_2-8 0
+        }
+        
+        ol.lst-kix_list_8-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_12-3>li:before {
+            content: "" counter(lst-ctn-kix_list_12-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_7-6.start {
+            counter-reset: lst-ctn-kix_list_7-6 0
+        }
+        
+        ol.lst-kix_list_8-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_12-1>li:before {
+            content: "" counter(lst-ctn-kix_list_12-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_8-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_8-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_8-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_8-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_16-3>li {
+            counter-increment: lst-ctn-kix_list_16-3
+        }
+        
+        ol.lst-kix_list_8-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_8-2 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_13-3>li {
+            counter-increment: lst-ctn-kix_list_13-3
+        }
+        
+        ol.lst-kix_list_13-6.start {
+            counter-reset: lst-ctn-kix_list_13-6 0
+        }
+        
+        ol.lst-kix_list_8-3 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_10-4>li {
+            counter-increment: lst-ctn-kix_list_10-4
+        }
+        
+        ol.lst-kix_list_15-3.start {
+            counter-reset: lst-ctn-kix_list_15-3 0
+        }
+        
+        .lst-kix_list_14-1>li {
+            counter-increment: lst-ctn-kix_list_14-1
+        }
+        
+        .lst-kix_list_13-3>li:before {
+            content: "" counter(lst-ctn-kix_list_13-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_5-8.start {
+            counter-reset: lst-ctn-kix_list_5-8 0
+        }
+        
+        .lst-kix_list_1-3>li {
+            counter-increment: lst-ctn-kix_list_1-3
+        }
+        
+        .lst-kix_list_13-5>li:before {
+            content: "" counter(lst-ctn-kix_list_13-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_12-5>li:before {
+            content: "" counter(lst-ctn-kix_list_12-5, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_13-7.start {
+            counter-reset: lst-ctn-kix_list_13-7 0
+        }
+        
+        .lst-kix_list_18-4>li {
+            counter-increment: lst-ctn-kix_list_18-4
+        }
+        
+        ol.lst-kix_list_12-2.start {
+            counter-reset: lst-ctn-kix_list_12-2 0
+        }
+        
+        .lst-kix_list_12-7>li:before {
+            content: "" counter(lst-ctn-kix_list_12-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_6-0.start {
+            counter-reset: lst-ctn-kix_list_6-0 0
+        }
+        
+        .lst-kix_list_4-2>li {
+            counter-increment: lst-ctn-kix_list_4-2
+        }
+        
+        .lst-kix_list_13-1>li:before {
+            content: "" counter(lst-ctn-kix_list_13-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_3-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-4.start {
+            counter-reset: lst-ctn-kix_list_3-4 0
+        }
+        
+        .lst-kix_list_5-1>li {
+            counter-increment: lst-ctn-kix_list_5-1
+        }
+        
+        ol.lst-kix_list_3-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-0.start {
+            counter-reset: lst-ctn-kix_list_19-0 0
+        }
+        
+        ol.lst-kix_list_3-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_11-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_11-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_11-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_1-1>li {
+            counter-increment: lst-ctn-kix_list_1-1
+        }
+        
+        .lst-kix_list_7-1>li {
+            counter-increment: lst-ctn-kix_list_7-1
+        }
+        
+        ol.lst-kix_list_11-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_11-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-6.start {
+            counter-reset: lst-ctn-kix_list_2-6 0
+        }
+        
+        .lst-kix_list_3-0>li:before {
+            content: "" counter(lst-ctn-kix_list_3-0, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_11-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_11-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-1.start {
+            counter-reset: lst-ctn-kix_list_13-1 0
+        }
+        
+        ol.lst-kix_list_11-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_16-0>li {
+            counter-increment: lst-ctn-kix_list_16-0
+        }
+        
+        .lst-kix_list_4-0>li {
+            counter-increment: lst-ctn-kix_list_4-0
+        }
+        
+        .lst-kix_list_8-0>li {
+            counter-increment: lst-ctn-kix_list_8-0
+        }
+        
+        .lst-kix_list_10-0>li {
+            counter-increment: lst-ctn-kix_list_10-0
+        }
+        
+        .lst-kix_list_3-4>li:before {
+            content: "" counter(lst-ctn-kix_list_3-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_18-2.start {
+            counter-reset: lst-ctn-kix_list_18-2 0
+        }
+        
+        .lst-kix_list_3-3>li:before {
+            content: "" counter(lst-ctn-kix_list_3-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_3-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_8-0>li:before {
+            content: "" counter(lst-ctn-kix_list_8-0, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_3-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_8-7>li:before {
+            content: "" counter(lst-ctn-kix_list_8-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_3-8>li:before {
+            content: "" counter(lst-ctn-kix_list_3-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_10-7.start {
+            counter-reset: lst-ctn-kix_list_10-7 0
+        }
+        
+        .lst-kix_list_13-1>li {
+            counter-increment: lst-ctn-kix_list_13-1
+        }
+        
+        ol.lst-kix_list_15-8.start {
+            counter-reset: lst-ctn-kix_list_15-8 0
+        }
+        
+        .lst-kix_list_8-3>li:before {
+            content: "" counter(lst-ctn-kix_list_8-3, decimal) ". "
+        }
+        
+        .lst-kix_list_3-7>li:before {
+            content: "" counter(lst-ctn-kix_list_3-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_8-4>li:before {
+            content: "" counter(lst-ctn-kix_list_8-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_19-1>li {
+            counter-increment: lst-ctn-kix_list_19-1
+        }
+        
+        .lst-kix_list_10-2>li {
+            counter-increment: lst-ctn-kix_list_10-2
+        }
+        
+        ol.lst-kix_list_8-5.start {
+            counter-reset: lst-ctn-kix_list_8-5 0
+        }
+        
+        .lst-kix_list_17-1>li {
+            counter-increment: lst-ctn-kix_list_17-1
+        }
+        
+        .lst-kix_list_11-1>li:before {
+            content: "\002b9a  "
+        }
+        
+        .lst-kix_list_11-0>li:before {
+            content: "" counter(lst-ctn-kix_list_11-0, decimal) ") "
+        }
+        
+        ol.lst-kix_list_9-3.start {
+            counter-reset: lst-ctn-kix_list_9-3 0
+        }
+        
+        .lst-kix_list_8-8>li:before {
+            content: "" counter(lst-ctn-kix_list_8-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_2-2 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_16-8>li:before {
+            content: "" counter(lst-ctn-kix_list_16-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_2-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_16-7>li:before {
+            content: "" counter(lst-ctn-kix_list_16-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_7-2.start {
+            counter-reset: lst-ctn-kix_list_7-2 0
+        }
+        
+        ol.lst-kix_list_2-5 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_17-8>li {
+            counter-increment: lst-ctn-kix_list_17-8
+        }
+        
+        ol.lst-kix_list_2-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-5.start {
+            counter-reset: lst-ctn-kix_list_19-5 0
+        }
+        
+        .lst-kix_list_4-8>li:before {
+            content: "" counter(lst-ctn-kix_list_4-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_12-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_12-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_4-7>li:before {
+            content: "" counter(lst-ctn-kix_list_4-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_12-7 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_14-2>li {
+            counter-increment: lst-ctn-kix_list_14-2
+        }
+        
+        .lst-kix_list_17-0>li:before {
+            content: "" counter(lst-ctn-kix_list_17-0, decimal) ". "
+        }
+        
+        ol.lst-kix_list_12-8 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_12-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_12-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_12-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_12-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_16-0>li:before {
+            content: "" counter(lst-ctn-kix_list_16-0, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_12-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_4-8.start {
+            counter-reset: lst-ctn-kix_list_4-8 0
+        }
+        
+        .lst-kix_list_8-4>li {
+            counter-increment: lst-ctn-kix_list_8-4
+        }
+        
+        .lst-kix_list_16-4>li:before {
+            content: "" counter(lst-ctn-kix_list_16-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_3-3.start {
+            counter-reset: lst-ctn-kix_list_3-3 0
+        }
+        
+        ol.lst-kix_list_10-8.start {
+            counter-reset: lst-ctn-kix_list_10-8 0
+        }
+        
+        .lst-kix_list_16-3>li:before {
+            content: "" counter(lst-ctn-kix_list_16-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_2-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_11-3>li {
+            counter-increment: lst-ctn-kix_list_11-3
+        }
+        
+        ol.lst-kix_list_18-1.start {
+            counter-reset: lst-ctn-kix_list_18-1 0
+        }
+        
+        ol.lst-kix_list_7-1.start {
+            counter-reset: lst-ctn-kix_list_7-1 0
+        }
+        
+        ol.lst-kix_list_8-6.start {
+            counter-reset: lst-ctn-kix_list_8-6 0
+        }
+        
+        .lst-kix_list_17-7>li:before {
+            content: "" counter(lst-ctn-kix_list_17-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_16-7>li {
+            counter-increment: lst-ctn-kix_list_16-7
+        }
+        
+        .lst-kix_list_17-8>li:before {
+            content: "" counter(lst-ctn-kix_list_17-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_17-3>li:before {
+            content: "" counter(lst-ctn-kix_list_17-3, decimal) ". "
+        }
+        
+        .lst-kix_list_17-4>li:before {
+            content: "" counter(lst-ctn-kix_list_17-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_8-0.start {
+            counter-reset: lst-ctn-kix_list_8-0 0
+        }
+        
+        .lst-kix_list_7-0>li:before {
+            content: "" counter(lst-ctn-kix_list_7-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_13-8>li {
+            counter-increment: lst-ctn-kix_list_13-8
+        }
+        
+        .lst-kix_list_2-2>li {
+            counter-increment: lst-ctn-kix_list_2-2
+        }
+        
+        ol.lst-kix_list_19-6.start {
+            counter-reset: lst-ctn-kix_list_19-6 0
+        }
+        
+        ol.lst-kix_list_4-7.start {
+            counter-reset: lst-ctn-kix_list_4-7 0
+        }
+        
+        .lst-kix_list_16-5>li {
+            counter-increment: lst-ctn-kix_list_16-5
+        }
+        
+        ol.lst-kix_list_5-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_3-7>li {
+            counter-increment: lst-ctn-kix_list_3-7
+        }
+        
+        ol.lst-kix_list_5-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_9-7.start {
+            counter-reset: lst-ctn-kix_list_9-7 0
+        }
+        
+        ol.lst-kix_list_5-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_2-4>li:before {
+            content: "" counter(lst-ctn-kix_list_2-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_2-8>li:before {
+            content: "" counter(lst-ctn-kix_list_2-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_13-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_13-1 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_6-6>li {
+            counter-increment: lst-ctn-kix_list_6-6
+        }
+        
+        ol.lst-kix_list_13-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_15-7.start {
+            counter-reset: lst-ctn-kix_list_15-7 0
+        }
+        
+        .lst-kix_list_7-3>li:before {
+            content: "" counter(lst-ctn-kix_list_7-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_13-3 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_10-0>li:before {
+            content: "" counter(lst-ctn-kix_list_10-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_9-7>li {
+            counter-increment: lst-ctn-kix_list_9-7
+        }
+        
+        .lst-kix_list_13-6>li {
+            counter-increment: lst-ctn-kix_list_13-6
+        }
+        
+        .lst-kix_list_13-8>li:before {
+            content: "" counter(lst-ctn-kix_list_13-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_14-6.start {
+            counter-reset: lst-ctn-kix_list_14-6 0
+        }
+        
+        .lst-kix_list_18-3>li:before {
+            content: "" counter(lst-ctn-kix_list_18-3, decimal) ". "
+        }
+        
+        .lst-kix_list_18-7>li:before {
+            content: "" counter(lst-ctn-kix_list_18-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_5-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_5-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_18-6>li {
+            counter-increment: lst-ctn-kix_list_18-6
+        }
+        
+        ol.lst-kix_list_5-3 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_8-7>li {
+            counter-increment: lst-ctn-kix_list_8-7
+        }
+        
+        .lst-kix_list_19-6>li {
+            counter-increment: lst-ctn-kix_list_19-6
+        }
+        
+        ol.lst-kix_list_5-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-8.start {
+            counter-reset: lst-ctn-kix_list_3-8 0
+        }
+        
+        ol.lst-kix_list_5-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_5-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_7-7>li:before {
+            content: "" counter(lst-ctn-kix_list_7-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_8-1.start {
+            counter-reset: lst-ctn-kix_list_8-1 0
+        }
+        
+        .lst-kix_list_15-4>li:before {
+            content: "" counter(lst-ctn-kix_list_15-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_9-5>li {
+            counter-increment: lst-ctn-kix_list_9-5
+        }
+        
+        ol.lst-kix_list_19-1.start {
+            counter-reset: lst-ctn-kix_list_19-1 0
+        }
+        
+        .lst-kix_list_5-8>li {
+            counter-increment: lst-ctn-kix_list_5-8
+        }
+        
+        .lst-kix_list_10-4>li:before {
+            content: "" counter(lst-ctn-kix_list_10-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_10-8>li:before {
+            content: "" counter(lst-ctn-kix_list_10-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_4-0>li:before {
+            content: "" counter(lst-ctn-kix_list_4-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_15-0>li:before {
+            content: "" counter(lst-ctn-kix_list_15-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_15-8>li:before {
+            content: "" counter(lst-ctn-kix_list_15-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_19-4.start {
+            counter-reset: lst-ctn-kix_list_19-4 0
+        }
+        
+        ol.lst-kix_list_14-3.start {
+            counter-reset: lst-ctn-kix_list_14-3 0
+        }
+        
+        .lst-kix_list_15-7>li {
+            counter-increment: lst-ctn-kix_list_15-7
+        }
+        
+        .lst-kix_list_4-4>li:before {
+            content: "" counter(lst-ctn-kix_list_4-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_2-2.start {
+            counter-reset: lst-ctn-kix_list_2-2 0
+        }
+        
+        .lst-kix_list_19-4>li {
+            counter-increment: lst-ctn-kix_list_19-4
+        }
+        
+        .lst-kix_list_9-3>li:before {
+            content: "" counter(lst-ctn-kix_list_9-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_7-0.start {
+            counter-reset: lst-ctn-kix_list_7-0 0
+        }
+        
+        .lst-kix_list_12-8>li {
+            counter-increment: lst-ctn-kix_list_12-8
+        }
+        
+        ol.lst-kix_list_13-2.start {
+            counter-reset: lst-ctn-kix_list_13-2 0
+        }
+        
+        ol.lst-kix_list_4-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_4-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_4-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_4-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_14-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_14-4.start {
+            counter-reset: lst-ctn-kix_list_14-4 0
+        }
+        
+        ol.lst-kix_list_14-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_9-7>li:before {
+            content: "" counter(lst-ctn-kix_list_9-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_2-4>li {
+            counter-increment: lst-ctn-kix_list_2-4
+        }
+        
+        ol.lst-kix_list_14-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_3-6.start {
+            counter-reset: lst-ctn-kix_list_3-6 0
+        }
+        
+        ol.lst-kix_list_14-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_14-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_14-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_11-4>li:before {
+            content: "" counter(lst-ctn-kix_list_11-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_15-2>li {
+            counter-increment: lst-ctn-kix_list_15-2
+        }
+        
+        ol.lst-kix_list_14-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_12-4>li:before {
+            content: "" counter(lst-ctn-kix_list_12-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_14-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_14-2 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_5-3>li {
+            counter-increment: lst-ctn-kix_list_5-3
+        }
+        
+        ol.lst-kix_list_4-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_7-4>li {
+            counter-increment: lst-ctn-kix_list_7-4
+        }
+        
+        .lst-kix_list_1-0>li:before {
+            content: "" counter(lst-ctn-kix_list_1-0, decimal) ". "
+        }
+        
+        ol.lst-kix_list_19-2.start {
+            counter-reset: lst-ctn-kix_list_19-2 0
+        }
+        
+        ol.lst-kix_list_4-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_11-8>li:before {
+            content: "" counter(lst-ctn-kix_list_11-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_12-3>li {
+            counter-increment: lst-ctn-kix_list_12-3
+        }
+        
+        ol.lst-kix_list_4-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_2-0.start {
+            counter-reset: lst-ctn-kix_list_2-0 0
+        }
+        
+        ol.lst-kix_list_4-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_12-0>li:before {
+            content: "" counter(lst-ctn-kix_list_12-0, decimal) ") "
+        }
+        
+        .lst-kix_list_17-3>li {
+            counter-increment: lst-ctn-kix_list_17-3
+        }
+        
+        ol.lst-kix_list_4-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_8-4.start {
+            counter-reset: lst-ctn-kix_list_8-4 0
+        }
+        
+        .lst-kix_list_1-4>li:before {
+            content: "" counter(lst-ctn-kix_list_1-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_13-0>li:before {
+            content: "" counter(lst-ctn-kix_list_13-0, decimal) ". "
+        }
+        
+        ol.lst-kix_list_3-5.start {
+            counter-reset: lst-ctn-kix_list_3-5 0
+        }
+        
+        .lst-kix_list_1-6>li {
+            counter-increment: lst-ctn-kix_list_1-6
+        }
+        
+        ol.lst-kix_list_13-0.start {
+            counter-reset: lst-ctn-kix_list_13-0 0
+        }
+        
+        .lst-kix_list_14-4>li {
+            counter-increment: lst-ctn-kix_list_14-4
+        }
+        
+        .lst-kix_list_13-4>li:before {
+            content: "" counter(lst-ctn-kix_list_13-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_10-7>li {
+            counter-increment: lst-ctn-kix_list_10-7
+        }
+        
+        ol.lst-kix_list_19-3.start {
+            counter-reset: lst-ctn-kix_list_19-3 0
+        }
+        
+        .lst-kix_list_2-0>li:before {
+            content: "" counter(lst-ctn-kix_list_2-0, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_2-1.start {
+            counter-reset: lst-ctn-kix_list_2-1 0
+        }
+        
+        .lst-kix_list_18-1>li {
+            counter-increment: lst-ctn-kix_list_18-1
+        }
+        
+        ol.lst-kix_list_8-3.start {
+            counter-reset: lst-ctn-kix_list_8-3 0
+        }
+        
+        .lst-kix_list_11-5>li {
+            counter-increment: lst-ctn-kix_list_11-5
+        }
+        
+        .lst-kix_list_4-5>li {
+            counter-increment: lst-ctn-kix_list_4-5
+        }
+        
+        ol.lst-kix_list_14-5.start {
+            counter-reset: lst-ctn-kix_list_14-5 0
+        }
+        
+        ol.lst-kix_list_9-8.start {
+            counter-reset: lst-ctn-kix_list_9-8 0
+        }
+        
+        .lst-kix_list_1-8>li:before {
+            content: "" counter(lst-ctn-kix_list_1-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_12-8>li:before {
+            content: "" counter(lst-ctn-kix_list_12-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_8-2>li {
+            counter-increment: lst-ctn-kix_list_8-2
+        }
+        
+        .lst-kix_list_4-1>li {
+            counter-increment: lst-ctn-kix_list_4-1
+        }
+        
+        .lst-kix_list_19-0>li:before {
+            content: "" counter(lst-ctn-kix_list_19-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_19-1>li:before {
+            content: "" counter(lst-ctn-kix_list_19-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_17-7.start {
+            counter-reset: lst-ctn-kix_list_17-7 0
+        }
+        
+        ol.lst-kix_list_12-6.start {
+            counter-reset: lst-ctn-kix_list_12-6 0
+        }
+        
+        .lst-kix_list_19-4>li:before {
+            content: "" counter(lst-ctn-kix_list_19-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_8-1>li {
+            counter-increment: lst-ctn-kix_list_8-1
+        }
+        
+        ol.lst-kix_list_8-2.start {
+            counter-reset: lst-ctn-kix_list_8-2 0
+        }
+        
+        .lst-kix_list_19-2>li:before {
+            content: "" counter(lst-ctn-kix_list_19-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_19-3>li:before {
+            content: "" counter(lst-ctn-kix_list_19-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_3-1.start {
+            counter-reset: lst-ctn-kix_list_3-1 0
+        }
+        
+        .lst-kix_list_15-0>li {
+            counter-increment: lst-ctn-kix_list_15-0
+        }
+        
+        ol.lst-kix_list_6-6.start {
+            counter-reset: lst-ctn-kix_list_6-6 0
+        }
+        
+        .lst-kix_list_7-0>li {
+            counter-increment: lst-ctn-kix_list_7-0
+        }
+        
+        .lst-kix_list_11-0>li {
+            counter-increment: lst-ctn-kix_list_11-0
+        }
+        
+        .lst-kix_list_19-0>li {
+            counter-increment: lst-ctn-kix_list_19-0
+        }
+        
+        ol.lst-kix_list_1-5.start {
+            counter-reset: lst-ctn-kix_list_1-5 0
+        }
+        
+        ol.lst-kix_list_9-6.start {
+            counter-reset: lst-ctn-kix_list_9-6 0
+        }
+        
+        ol.lst-kix_list_16-3.start {
+            counter-reset: lst-ctn-kix_list_16-3 0
+        }
+        
+        .lst-kix_list_2-3>li {
+            counter-increment: lst-ctn-kix_list_2-3
+        }
+        
+        ol.lst-kix_list_19-8.start {
+            counter-reset: lst-ctn-kix_list_19-8 0
+        }
+        
+        ol.lst-kix_list_4-5.start {
+            counter-reset: lst-ctn-kix_list_4-5 0
+        }
+        
+        .lst-kix_list_1-2>li {
+            counter-increment: lst-ctn-kix_list_1-2
+        }
+        
+        .lst-kix_list_19-8>li:before {
+            content: "" counter(lst-ctn-kix_list_19-8, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_14-7.start {
+            counter-reset: lst-ctn-kix_list_14-7 0
+        }
+        
+        ol.lst-kix_list_11-2.start {
+            counter-reset: lst-ctn-kix_list_11-2 0
+        }
+        
+        .lst-kix_list_5-2>li {
+            counter-increment: lst-ctn-kix_list_5-2
+        }
+        
+        .lst-kix_list_19-5>li:before {
+            content: "" counter(lst-ctn-kix_list_19-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_19-6>li:before {
+            content: "" counter(lst-ctn-kix_list_19-6, decimal) ". "
+        }
+        
+        .lst-kix_list_19-7>li:before {
+            content: "" counter(lst-ctn-kix_list_19-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_9-2>li {
+            counter-increment: lst-ctn-kix_list_9-2
+        }
+        
+        ol.lst-kix_list_8-7.start {
+            counter-reset: lst-ctn-kix_list_8-7 0
+        }
+        
+        .lst-kix_list_17-2>li {
+            counter-increment: lst-ctn-kix_list_17-2
+        }
+        
+        ol.lst-kix_list_17-2.start {
+            counter-reset: lst-ctn-kix_list_17-2 0
+        }
+        
+        .lst-kix_list_13-2>li {
+            counter-increment: lst-ctn-kix_list_13-2
+        }
+        
+        .lst-kix_list_19-7>li {
+            counter-increment: lst-ctn-kix_list_19-7
+        }
+        
+        .lst-kix_list_14-3>li {
+            counter-increment: lst-ctn-kix_list_14-3
+        }
+        
+        ol.lst-kix_list_15-6.start {
+            counter-reset: lst-ctn-kix_list_15-6 0
+        }
+        
+        .lst-kix_list_18-3>li {
+            counter-increment: lst-ctn-kix_list_18-3
+        }
+        
+        .lst-kix_list_10-3>li {
+            counter-increment: lst-ctn-kix_list_10-3
+        }
+        
+        .lst-kix_list_12-1>li {
+            counter-increment: lst-ctn-kix_list_12-1
+        }
+        
+        ol.lst-kix_list_1-0.start {
+            counter-reset: lst-ctn-kix_list_1-0 0
+        }
+        
+        .lst-kix_list_18-0>li:before {
+            content: "" counter(lst-ctn-kix_list_18-0, decimal) ". "
+        }
+        
+        ol.lst-kix_list_13-3.start {
+            counter-reset: lst-ctn-kix_list_13-3 0
+        }
+        
+        .lst-kix_list_3-0>li {
+            counter-increment: lst-ctn-kix_list_3-0
+        }
+        
+        .lst-kix_list_18-1>li:before {
+            content: "" counter(lst-ctn-kix_list_18-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_18-2>li:before {
+            content: "" counter(lst-ctn-kix_list_18-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_4-0.start {
+            counter-reset: lst-ctn-kix_list_4-0 0
+        }
+        
+        ol.lst-kix_list_11-7.start {
+            counter-reset: lst-ctn-kix_list_11-7 0
+        }
+        
+        ol.lst-kix_list_14-2.start {
+            counter-reset: lst-ctn-kix_list_14-2 0
+        }
+        
+        .lst-kix_list_16-1>li {
+            counter-increment: lst-ctn-kix_list_16-1
+        }
+        
+        ol.lst-kix_list_2-4.start {
+            counter-reset: lst-ctn-kix_list_2-4 0
+        }
+        
+        ol.lst-kix_list_1-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_1-4 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_2-7>li:before {
+            content: "" counter(lst-ctn-kix_list_2-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_2-7>li {
+            counter-increment: lst-ctn-kix_list_2-7
+        }
+        
+        ol.lst-kix_list_1-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_1-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_1-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_2-5>li:before {
+            content: "" counter(lst-ctn-kix_list_2-5, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_1-1 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_17-5>li {
+            counter-increment: lst-ctn-kix_list_17-5
+        }
+        
+        ol.lst-kix_list_1-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_17-0.start {
+            counter-reset: lst-ctn-kix_list_17-0 0
+        }
+        
+        ol.lst-kix_list_10-3.start {
+            counter-reset: lst-ctn-kix_list_10-3 0
+        }
+        
+        .lst-kix_list_18-6>li:before {
+            content: "" counter(lst-ctn-kix_list_18-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_9-4.start {
+            counter-reset: lst-ctn-kix_list_9-4 0
+        }
+        
+        .lst-kix_list_14-6>li {
+            counter-increment: lst-ctn-kix_list_14-6
+        }
+        
+        .lst-kix_list_10-1>li:before {
+            content: "" counter(lst-ctn-kix_list_10-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_18-4>li:before {
+            content: "" counter(lst-ctn-kix_list_18-4, lower-latin) ". "
+        }
+        
+        .lst-kix_list_18-8>li:before {
+            content: "" counter(lst-ctn-kix_list_18-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_17-6>li {
+            counter-increment: lst-ctn-kix_list_17-6
+        }
+        
+        .lst-kix_list_7-7>li {
+            counter-increment: lst-ctn-kix_list_7-7
+        }
+        
+        ol.lst-kix_list_15-1.start {
+            counter-reset: lst-ctn-kix_list_15-1 0
+        }
+        
+        ol.lst-kix_list_15-4.start {
+            counter-reset: lst-ctn-kix_list_15-4 0
+        }
+        
+        ol.lst-kix_list_4-3.start {
+            counter-reset: lst-ctn-kix_list_4-3 0
+        }
+        
+        ol.lst-kix_list_1-7 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_1-8 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_10-7>li:before {
+            content: "" counter(lst-ctn-kix_list_10-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_7-8>li {
+            counter-increment: lst-ctn-kix_list_7-8
+        }
+        
+        .lst-kix_list_10-5>li:before {
+            content: "" counter(lst-ctn-kix_list_10-5, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_13-5.start {
+            counter-reset: lst-ctn-kix_list_13-5 0
+        }
+        
+        ol.lst-kix_list_18-6.start {
+            counter-reset: lst-ctn-kix_list_18-6 0
+        }
+        
+        .lst-kix_list_10-3>li:before {
+            content: "" counter(lst-ctn-kix_list_10-3, decimal) ". "
+        }
+        
+        .lst-kix_list_15-4>li {
+            counter-increment: lst-ctn-kix_list_15-4
+        }
+        
+        .lst-kix_list_2-6>li {
+            counter-increment: lst-ctn-kix_list_2-6
+        }
+        
+        ol.lst-kix_list_7-3.start {
+            counter-reset: lst-ctn-kix_list_7-3 0
+        }
+        
+        ol.lst-kix_list_13-8.start {
+            counter-reset: lst-ctn-kix_list_13-8 0
+        }
+        
+        ul.lst-kix_list_11-1 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_11-7>li {
+            counter-increment: lst-ctn-kix_list_11-7
+        }
+        
+        .lst-kix_list_9-2>li:before {
+            content: "" counter(lst-ctn-kix_list_9-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_5-7.start {
+            counter-reset: lst-ctn-kix_list_5-7 0
+        }
+        
+        ol.lst-kix_list_14-0.start {
+            counter-reset: lst-ctn-kix_list_14-0 0
+        }
+        
+        .lst-kix_list_12-5>li {
+            counter-increment: lst-ctn-kix_list_12-5
+        }
+        
+        .lst-kix_list_5-5>li {
+            counter-increment: lst-ctn-kix_list_5-5
+        }
+        
+        .lst-kix_list_9-0>li:before {
+            content: "" counter(lst-ctn-kix_list_9-0, lower-latin) ". "
+        }
+        
+        .lst-kix_list_3-4>li {
+            counter-increment: lst-ctn-kix_list_3-4
+        }
+        
+        .lst-kix_list_16-8>li {
+            counter-increment: lst-ctn-kix_list_16-8
+        }
+        
+        ol.lst-kix_list_10-7 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_9-6>li:before {
+            content: "" counter(lst-ctn-kix_list_9-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_10-8 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_10-3 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_9-4>li:before {
+            content: "" counter(lst-ctn-kix_list_9-4, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_10-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_10-5 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_11-3>li:before {
+            content: "" counter(lst-ctn-kix_list_11-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_10-6 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_6-3>li {
+            counter-increment: lst-ctn-kix_list_6-3
+        }
+        
+        ol.lst-kix_list_18-4.start {
+            counter-reset: lst-ctn-kix_list_18-4 0
+        }
+        
+        ol.lst-kix_list_10-0 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_10-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_1-3.start {
+            counter-reset: lst-ctn-kix_list_1-3 0
+        }
+        
+        ol.lst-kix_list_10-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_12-1.start {
+            counter-reset: lst-ctn-kix_list_12-1 0
+        }
+        
+        ol.lst-kix_list_1-2.start {
+            counter-reset: lst-ctn-kix_list_1-2 0
+        }
+        
+        .lst-kix_list_11-5>li:before {
+            content: "" counter(lst-ctn-kix_list_11-5, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_6-1.start {
+            counter-reset: lst-ctn-kix_list_6-1 0
+        }
+        
+        .lst-kix_list_9-8>li:before {
+            content: "" counter(lst-ctn-kix_list_9-8, lower-roman) ". "
+        }
+        
+        .lst-kix_list_1-1>li:before {
+            content: "" counter(lst-ctn-kix_list_1-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_11-7>li:before {
+            content: "" counter(lst-ctn-kix_list_11-7, lower-latin) ". "
+        }
+        
+        .lst-kix_list_8-5>li {
+            counter-increment: lst-ctn-kix_list_8-5
+        }
+        
+        .lst-kix_list_1-3>li:before {
+            content: "" counter(lst-ctn-kix_list_1-3, decimal) ". "
+        }
+        
+        ol.lst-kix_list_16-8.start {
+            counter-reset: lst-ctn-kix_list_16-8 0
+        }
+        
+        ol.lst-kix_list_10-5.start {
+            counter-reset: lst-ctn-kix_list_10-5 0
+        }
+        
+        .lst-kix_list_4-8>li {
+            counter-increment: lst-ctn-kix_list_4-8
+        }
+        
+        .lst-kix_list_1-7>li:before {
+            content: "" counter(lst-ctn-kix_list_1-7, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_2-7.start {
+            counter-reset: lst-ctn-kix_list_2-7 0
+        }
+        
+        .lst-kix_list_1-5>li:before {
+            content: "" counter(lst-ctn-kix_list_1-5, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_9-1.start {
+            counter-reset: lst-ctn-kix_list_9-1 0
+        }
+        
+        .lst-kix_list_14-7>li {
+            counter-increment: lst-ctn-kix_list_14-7
+        }
+        
+        .lst-kix_list_5-6>li {
+            counter-increment: lst-ctn-kix_list_5-6
+        }
+        
+        ol.lst-kix_list_7-5.start {
+            counter-reset: lst-ctn-kix_list_7-5 0
+        }
+        
+        .lst-kix_list_2-1>li:before {
+            content: "" counter(lst-ctn-kix_list_2-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_19-8>li {
+            counter-increment: lst-ctn-kix_list_19-8
+        }
+        
+        .lst-kix_list_2-3>li:before {
+            content: "" counter(lst-ctn-kix_list_2-3, decimal) ". "
+        }
+        
+        .lst-kix_list_11-8>li {
+            counter-increment: lst-ctn-kix_list_11-8
+        }
+        
+        ol.lst-kix_list_19-6 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-7 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_3-1>li {
+            counter-increment: lst-ctn-kix_list_3-1
+        }
+        
+        ol.lst-kix_list_19-8 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-2 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-3 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-4 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-5 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_19-0 {
+            list-style-type: none
+        }
+        
+        .lst-kix_list_9-1>li {
+            counter-increment: lst-ctn-kix_list_9-1
+        }
+        
+        ol.lst-kix_list_19-1 {
+            list-style-type: none
+        }
+        
+        ol.lst-kix_list_7-7.start {
+            counter-reset: lst-ctn-kix_list_7-7 0
+        }
+        
+        .lst-kix_list_3-1>li:before {
+            content: "" counter(lst-ctn-kix_list_3-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_3-2>li:before {
+            content: "" counter(lst-ctn-kix_list_3-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_14-0>li {
+            counter-increment: lst-ctn-kix_list_14-0
+        }
+        
+        .lst-kix_list_8-1>li:before {
+            content: "" counter(lst-ctn-kix_list_8-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_1-8.start {
+            counter-reset: lst-ctn-kix_list_1-8 0
+        }
+        
+        ol.lst-kix_list_17-4.start {
+            counter-reset: lst-ctn-kix_list_17-4 0
+        }
+        
+        .lst-kix_list_8-2>li:before {
+            content: "" counter(lst-ctn-kix_list_8-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_6-0>li {
+            counter-increment: lst-ctn-kix_list_6-0
+        }
+        
+        .lst-kix_list_3-5>li:before {
+            content: "" counter(lst-ctn-kix_list_3-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_18-0>li {
+            counter-increment: lst-ctn-kix_list_18-0
+        }
+        
+        .lst-kix_list_12-0>li {
+            counter-increment: lst-ctn-kix_list_12-0
+        }
+        
+        ol.lst-kix_list_12-3.start {
+            counter-reset: lst-ctn-kix_list_12-3 0
+        }
+        
+        ol.lst-kix_list_11-5.start {
+            counter-reset: lst-ctn-kix_list_11-5 0
+        }
+        
+        .lst-kix_list_8-5>li:before {
+            content: "" counter(lst-ctn-kix_list_8-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_8-6>li:before {
+            content: "" counter(lst-ctn-kix_list_8-6, decimal) ". "
+        }
+        
+        .lst-kix_list_2-0>li {
+            counter-increment: lst-ctn-kix_list_2-0
+        }
+        
+        .lst-kix_list_15-1>li {
+            counter-increment: lst-ctn-kix_list_15-1
+        }
+        
+        .lst-kix_list_3-6>li:before {
+            content: "" counter(lst-ctn-kix_list_3-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_16-6.start {
+            counter-reset: lst-ctn-kix_list_16-6 0
+        }
+        
+        ol.lst-kix_list_5-0.start {
+            counter-reset: lst-ctn-kix_list_5-0 0
+        }
+        
+        .lst-kix_list_11-2>li:before {
+            content: "" counter(lst-ctn-kix_list_11-2, lower-latin) ") "
+        }
+        
+        ol.lst-kix_list_4-2.start {
+            counter-reset: lst-ctn-kix_list_4-2 0
+        }
+        
+        ol.lst-kix_list_16-0.start {
+            counter-reset: lst-ctn-kix_list_16-0 0
+        }
+        
+        ol.lst-kix_list_18-7.start {
+            counter-reset: lst-ctn-kix_list_18-7 0
+        }
+        
+        ol.lst-kix_list_11-6.start {
+            counter-reset: lst-ctn-kix_list_11-6 0
+        }
+        
+        ol.lst-kix_list_12-4.start {
+            counter-reset: lst-ctn-kix_list_12-4 0
+        }
+        
+        .lst-kix_list_16-6>li:before {
+            content: "" counter(lst-ctn-kix_list_16-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_10-1.start {
+            counter-reset: lst-ctn-kix_list_10-1 0
+        }
+        
+        .lst-kix_list_4-4>li {
+            counter-increment: lst-ctn-kix_list_4-4
+        }
+        
+        ol.lst-kix_list_6-4.start {
+            counter-reset: lst-ctn-kix_list_6-4 0
+        }
+        
+        .lst-kix_list_17-1>li:before {
+            content: "" counter(lst-ctn-kix_list_17-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_18-2>li {
+            counter-increment: lst-ctn-kix_list_18-2
+        }
+        
+        ol.lst-kix_list_5-6.start {
+            counter-reset: lst-ctn-kix_list_5-6 0
+        }
+        
+        .lst-kix_list_16-1>li:before {
+            content: "" counter(lst-ctn-kix_list_16-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_4-1.start {
+            counter-reset: lst-ctn-kix_list_4-1 0
+        }
+        
+        .lst-kix_list_7-3>li {
+            counter-increment: lst-ctn-kix_list_7-3
+        }
+        
+        .lst-kix_list_16-2>li:before {
+            content: "" counter(lst-ctn-kix_list_16-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_16-5>li:before {
+            content: "" counter(lst-ctn-kix_list_16-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_19-3>li {
+            counter-increment: lst-ctn-kix_list_19-3
+        }
+        
+        .lst-kix_list_15-3>li {
+            counter-increment: lst-ctn-kix_list_15-3
+        }
+        
+        ol.lst-kix_list_7-8.start {
+            counter-reset: lst-ctn-kix_list_7-8 0
+        }
+        
+        .lst-kix_list_12-4>li {
+            counter-increment: lst-ctn-kix_list_12-4
+        }
+        
+        ol.lst-kix_list_11-0.start {
+            counter-reset: lst-ctn-kix_list_11-0 0
+        }
+        
+        ol.lst-kix_list_18-8.start {
+            counter-reset: lst-ctn-kix_list_18-8 0
+        }
+        
+        .lst-kix_list_3-3>li {
+            counter-increment: lst-ctn-kix_list_3-3
+        }
+        
+        .lst-kix_list_16-4>li {
+            counter-increment: lst-ctn-kix_list_16-4
+        }
+        
+        ol.lst-kix_list_6-3.start {
+            counter-reset: lst-ctn-kix_list_6-3 0
+        }
+        
+        ol.lst-kix_list_10-2.start {
+            counter-reset: lst-ctn-kix_list_10-2 0
+        }
+        
+        .lst-kix_list_12-7>li {
+            counter-increment: lst-ctn-kix_list_12-7
+        }
+        
+        .lst-kix_list_17-2>li:before {
+            content: "" counter(lst-ctn-kix_list_17-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_5-5.start {
+            counter-reset: lst-ctn-kix_list_5-5 0
+        }
+        
+        ol.lst-kix_list_16-5.start {
+            counter-reset: lst-ctn-kix_list_16-5 0
+        }
+        
+        ol.lst-kix_list_17-3.start {
+            counter-reset: lst-ctn-kix_list_17-3 0
+        }
+        
+        .lst-kix_list_17-6>li:before {
+            content: "" counter(lst-ctn-kix_list_17-6, decimal) ". "
+        }
+        
+        .lst-kix_list_17-5>li:before {
+            content: "" counter(lst-ctn-kix_list_17-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_6-2>li {
+            counter-increment: lst-ctn-kix_list_6-2
+        }
+        
+        .lst-kix_list_2-6>li:before {
+            content: "" counter(lst-ctn-kix_list_2-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_16-2.start {
+            counter-reset: lst-ctn-kix_list_16-2 0
+        }
+        
+        .lst-kix_list_14-5>li {
+            counter-increment: lst-ctn-kix_list_14-5
+        }
+        
+        .lst-kix_list_7-1>li:before {
+            content: "" counter(lst-ctn-kix_list_7-1, lower-latin) ". "
+        }
+        
+        .lst-kix_list_7-5>li:before {
+            content: "" counter(lst-ctn-kix_list_7-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_13-5>li {
+            counter-increment: lst-ctn-kix_list_13-5
+        }
+        
+        .lst-kix_list_9-6>li {
+            counter-increment: lst-ctn-kix_list_9-6
+        }
+        
+        .lst-kix_list_19-5>li {
+            counter-increment: lst-ctn-kix_list_19-5
+        }
+        
+        ol.lst-kix_list_5-4.start {
+            counter-reset: lst-ctn-kix_list_5-4 0
+        }
+        
+        .lst-kix_list_18-5>li:before {
+            content: "" counter(lst-ctn-kix_list_18-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_13-6>li:before {
+            content: "" counter(lst-ctn-kix_list_13-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_5-1.start {
+            counter-reset: lst-ctn-kix_list_5-1 0
+        }
+        
+        .lst-kix_list_6-7>li {
+            counter-increment: lst-ctn-kix_list_6-7
+        }
+        
+        .lst-kix_list_16-6>li {
+            counter-increment: lst-ctn-kix_list_16-6
+        }
+        
+        .lst-kix_list_10-6>li {
+            counter-increment: lst-ctn-kix_list_10-6
+        }
+        
+        .lst-kix_list_11-6>li {
+            counter-increment: lst-ctn-kix_list_11-6
+        }
+        
+        .lst-kix_list_1-7>li {
+            counter-increment: lst-ctn-kix_list_1-7
+        }
+        
+        ol.lst-kix_list_10-0.start {
+            counter-reset: lst-ctn-kix_list_10-0 0
+        }
+        
+        .lst-kix_list_7-5>li {
+            counter-increment: lst-ctn-kix_list_7-5
+        }
+        
+        .lst-kix_list_15-6>li:before {
+            content: "" counter(lst-ctn-kix_list_15-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_17-8.start {
+            counter-reset: lst-ctn-kix_list_17-8 0
+        }
+        
+        .lst-kix_list_11-4>li {
+            counter-increment: lst-ctn-kix_list_11-4
+        }
+        
+        .lst-kix_list_3-8>li {
+            counter-increment: lst-ctn-kix_list_3-8
+        }
+        
+        ol.lst-kix_list_6-8.start {
+            counter-reset: lst-ctn-kix_list_6-8 0
+        }
+        
+        .lst-kix_list_10-2>li:before {
+            content: "" counter(lst-ctn-kix_list_10-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_4-6>li {
+            counter-increment: lst-ctn-kix_list_4-6
+        }
+        
+        .lst-kix_list_13-7>li {
+            counter-increment: lst-ctn-kix_list_13-7
+        }
+        
+        ol.lst-kix_list_1-7.start {
+            counter-reset: lst-ctn-kix_list_1-7 0
+        }
+        
+        .lst-kix_list_1-5>li {
+            counter-increment: lst-ctn-kix_list_1-5
+        }
+        
+        ol.lst-kix_list_17-5.start {
+            counter-reset: lst-ctn-kix_list_17-5 0
+        }
+        
+        ol.lst-kix_list_6-5.start {
+            counter-reset: lst-ctn-kix_list_6-5 0
+        }
+        
+        .lst-kix_list_4-2>li:before {
+            content: "" counter(lst-ctn-kix_list_4-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_4-6>li:before {
+            content: "" counter(lst-ctn-kix_list_4-6, decimal) ". "
+        }
+        
+        .lst-kix_list_17-4>li {
+            counter-increment: lst-ctn-kix_list_17-4
+        }
+        
+        .lst-kix_list_15-2>li:before {
+            content: "" counter(lst-ctn-kix_list_15-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_10-8>li {
+            counter-increment: lst-ctn-kix_list_10-8
+        }
+        
+        .lst-kix_list_10-6>li:before {
+            content: "" counter(lst-ctn-kix_list_10-6, decimal) ". "
+        }
+        
+        .lst-kix_list_9-1>li:before {
+            content: "" counter(lst-ctn-kix_list_9-1, lower-latin) ". "
+        }
+        
+        ol.lst-kix_list_12-7.start {
+            counter-reset: lst-ctn-kix_list_12-7 0
+        }
+        
+        .lst-kix_list_15-8>li {
+            counter-increment: lst-ctn-kix_list_15-8
+        }
+        
+        ol.lst-kix_list_6-7.start {
+            counter-reset: lst-ctn-kix_list_6-7 0
+        }
+        
+        .lst-kix_list_12-2>li {
+            counter-increment: lst-ctn-kix_list_12-2
+        }
+        
+        .lst-kix_list_9-5>li:before {
+            content: "" counter(lst-ctn-kix_list_9-5, lower-roman) ". "
+        }
+        
+        .lst-kix_list_12-2>li:before {
+            content: "" counter(lst-ctn-kix_list_12-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_12-8.start {
+            counter-reset: lst-ctn-kix_list_12-8 0
+        }
+        
+        .lst-kix_list_11-6>li:before {
+            content: "" counter(lst-ctn-kix_list_11-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_11-3.start {
+            counter-reset: lst-ctn-kix_list_11-3 0
+        }
+        
+        .lst-kix_list_1-2>li:before {
+            content: "" counter(lst-ctn-kix_list_1-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_10-1>li {
+            counter-increment: lst-ctn-kix_list_10-1
+        }
+        
+        .lst-kix_list_1-0>li {
+            counter-increment: lst-ctn-kix_list_1-0
+        }
+        
+        .lst-kix_list_8-8>li {
+            counter-increment: lst-ctn-kix_list_8-8
+        }
+        
+        ol.lst-kix_list_16-1.start {
+            counter-reset: lst-ctn-kix_list_16-1 0
+        }
+        
+        ol.lst-kix_list_17-6.start {
+            counter-reset: lst-ctn-kix_list_17-6 0
+        }
+        
+        .lst-kix_list_1-6>li:before {
+            content: "" counter(lst-ctn-kix_list_1-6, decimal) ". "
+        }
+        
+        .lst-kix_list_18-7>li {
+            counter-increment: lst-ctn-kix_list_18-7
+        }
+        
+        .lst-kix_list_12-6>li:before {
+            content: "" counter(lst-ctn-kix_list_12-6, decimal) ". "
+        }
+        
+        ol.lst-kix_list_11-4.start {
+            counter-reset: lst-ctn-kix_list_11-4 0
+        }
+        
+        .lst-kix_list_2-2>li:before {
+            content: "" counter(lst-ctn-kix_list_2-2, lower-roman) ". "
+        }
+        
+        .lst-kix_list_13-2>li:before {
+            content: "" counter(lst-ctn-kix_list_13-2, lower-roman) ". "
+        }
+        
+        ol.lst-kix_list_5-2.start {
+            counter-reset: lst-ctn-kix_list_5-2 0
+        }
+        
+        ol {
+            margin: 0;
+            padding: 0
+        }
+        
+        table td,
+        table th {
+            padding: 0
+        }
+        
+        .c17 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 28.4pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c24 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 70.8pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c15 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 70.9pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c3 {
+            border-right-style: solid;
+            padding: 0pt 5.4pt 0pt 5.4pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 56.7pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c4 {
+            margin-left: 18pt;
+            padding-top: 0pt;
+            text-indent: 18pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .c5 {
+            margin-left: 49.6pt;
+            padding-top: 0pt;
+            padding-left: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .c2 {
+            margin-left: 53.5pt;
+            padding-top: 0pt;
+            padding-left: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .c1 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            height: 12pt
+        }
+        
+        .c0 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 12pt;
+            font-family: "Times New Roman";
+            font-style: normal
+        }
+        
+        .c9 {
+            color: #ff0000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 12pt;
+            font-family: "Times New Roman";
+            font-style: normal
+        }
+        
+        .c18 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 13pt;
+            font-family: "Times New Roman";
+            font-style: normal
+        }
+        
+        .c6 {
+            margin-left: 36pt;
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .c14 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: center
+        }
+        
+        .c34 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Arial";
+            font-style: normal
+        }
+        
+        .c7 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .c37 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Times New Roman";
+            font-style: normal
+        }
+        
+        .c22 {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-right: auto
+        }
+        
+        .c33 {
+            background-color: #ffffff;
+            max-width: 432pt;
+            padding: 72pt 90pt 72pt 90pt
+        }
+        
+        .c19 {
+            color: #ff0000;
+            font-size: 13pt
+        }
+        
+        .c8 {
+            padding: 0;
+            margin: 0
+        }
+        
+        .c12 {
+            margin-left: 53.5pt;
+            padding-left: -17.5pt
+        }
+        
+        .c36 {
+            vertical-align: super
+        }
+        
+        .c21 {
+            height: 12pt
+        }
+        
+        .c31 {
+            margin-left: 113.4pt
+        }
+        
+        .c26 {
+            margin-left: 54pt
+        }
+        
+        .c30 {
+            font-weight: 700
+        }
+        
+        .c13 {
+            margin-left: 56.7pt
+        }
+        
+        .c32 {
+            margin-left: 57.3pt
+        }
+        
+        .c27 {
+            color: #ff0000
+        }
+        
+        .c25 {
+            margin-left: 72pt
+        }
+        
+        .c23 {
+            font-size: 13pt
+        }
+        
+        .c10 {
+            padding-left: 0pt
+        }
+        
+        .c16 {
+            height: 0pt
+        }
+        
+        .c20 {
+            margin-left: 18pt
+        }
+        
+        .c29 {
+            margin-left: 63.8pt
+        }
+        
+        .c28 {
+            text-indent: 36pt
+        }
+        
+        .c11 {
+            margin-left: 28.4pt
+        }
+        
+        .c35 {
+            margin-left: 42.5pt
+        }
+        
+        .title {
+            padding-top: 24pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 36pt;
+            padding-bottom: 6pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .subtitle {
+            padding-top: 18pt;
+            color: #666666;
+            font-size: 24pt;
+            padding-bottom: 4pt;
+            font-family: "Georgia";
+            line-height: 1.0;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        li {
+            color: #000000;
+            font-size: 12pt;
+            font-family: "Times New Roman"
+        }
+        
+        p {
+            margin: 0;
+            color: #000000;
+            font-size: 12pt;
+            font-family: "Times New Roman"
+        }
+        
+        h1 {
+            padding-top: 24pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 24pt;
+            padding-bottom: 6pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h2 {
+            padding-top: 18pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 18pt;
+            padding-bottom: 4pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h3 {
+            padding-top: 14pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h4 {
+            padding-top: 12pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 12pt;
+            padding-bottom: 2pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h5 {
+            padding-top: 11pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 11pt;
+            padding-bottom: 2pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h6 {
+            padding-top: 10pt;
+            color: #000000;
+            font-weight: 700;
+            font-size: 10pt;
+            padding-bottom: 2pt;
+            font-family: "Times New Roman";
+            line-height: 1.0;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body class="c33">
+    <ol class="c8 lst-kix_list_1-0 start" start="1">
+        <li class="c6 c10"><span class="c0">Trong danh s&aacute;ch &#273;&#7863;c, khi x&oacute;a ph&#7847;n t&#7917; t&#7841;i v&#7883; tr&iacute; p trong danh s&aacute;ch ta c&#7847;n ph&#7843;i:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_2-0 start" start="1">
+        <li class="c7 c12"><span>Lu&ocirc;n lu&ocirc;n d&#7883;ch chuy&#7875;n c&aacute;c ph&#7847;n t&#7917; t&#7915; p &#273;&#7871;n L.Last ra sau m&#7897;t v&#7883; tr&iacute;.</span></li>
+        <li class="c7 c12"><span class="c27">C&oacute; th&#7875; d&#7883;ch chuy&#7875;n c&aacute;c ph&#7847;n t&#7917; t&#7915; p &#273;&#7871;n L.Last ra sau m&#7897;t v&#7883; tr&iacute;.</span></li>
+        <li class="c7 c12"><span class="c0">Lu&ocirc;n lu&ocirc;n d&#7883;ch chuy&#7875;n c&aacute;c ph&#7847;n t&#7917; t&#7915; p+1 &#273;&#7871;n L.Last ra sau m&#7897;t v&#7883; tr&iacute;.</span></li>
+        <li class="c7 c12"><span class="c0">C&oacute; th&#7875; d&#7883;ch chuy&#7875;n c&aacute;c ph&#7847;n t&#7917; t&#7915; p+1 &#273;&#7871;n L.Last ra sau m&#7897;t v&#7883; tr&iacute;.</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="2">
+        <li class="c6 c10"><span class="c0">Cho c&acirc;y nh&#7883; ph&acirc;n sau:</span></li>
+    </ol>
+    <p class="c7"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 186.47px; height: 124.13px;"><img alt="" src="images/image7.png" style="width: 186.47px; height: 124.13px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+        <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 326.67px; height: 128.27px;"><img alt="" src="images/image6.png" style="width: 326.67px; height: 128.27px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+    </p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <ol class="c8 lst-kix_list_1-0" start="3">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t NLR c&#7911;a c&acirc;y nh&#7883; ph&acirc;n &#7903; c&acirc;u 2 l&agrave;:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_4-0 start" start="1">
+        <li class="c7 c10 c29"><span class="c0">A, B, D, E, F, H, I, J, K, T</span></li>
+        <li class="c7 c10 c29"><span class="c0">H, D, A, B, E, F, K, I, J, T</span></li>
+        <li class="c7 c10 c29"><span class="c9">H, D, A, B, F, E, K, I, J, T</span></li>
+        <li class="c7 c10 c29"><span class="c0">B, A, E, F, D, J, I, T, K, H</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="4">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t LRN c&#7911;a c&acirc;y nh&#7883; ph&acirc;n &#7903; c&acirc;u 2 l&agrave;:</span></li>
+    </ol>
+    <p class="c7 c35"><span class="c0">a. A, B, D, E, F, H, I, J, K, T</span></p>
+    <p class="c7 c35"><span class="c0">b. H, D, A, B, E, F, K, I, J, T</span></p>
+    <p class="c7 c35"><span class="c0">c. H, D, A, B, F, E, K, I, J, T</span></p>
+    <p class="c7 c35"><span class="c9">d. B, A, E, F, D, J, I, T, K, H</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="5">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t trung t&#7921; t&#7893;ng qu&aacute;t c&#7911;a c&acirc;y nh&#7883; ph&acirc;n &#7903; c&acirc;u 2 l&agrave;:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_5-0 start" start="1">
+        <li class="c7 c12"><span class="c9">B, A, D, E, F, H, J, I, K, T</span></li>
+        <li class="c7 c12"><span class="c0">B, A, D, E, F, H, I, J, K, T</span></li>
+        <li class="c7 c12"><span class="c0">A, B, D, E, F, H, I, J, K, T</span></li>
+        <li class="c7 c12"><span class="c0">A, B, D, E, F, H, J, I, K, T</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="6">
+        <li class="c6 c10"><span class="c0">Gi&aacute; tr&#7883; bi&#7875;u th&#7921;c ti&#7873;n t&#7889; /, *, -, 2, 1, +, 3, 4, *, 7, -, 6, 5 l&agrave;</span></li>
+    </ol>
+    <p class="c4"><span>a. -7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. -1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c27">c. 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. 7</span>
+    </p>
+    <ol class="c8 lst-kix_list_1-0" start="7">
+        <li class="c6 c10"><span class="c0">Khi th&ecirc;m ph&#7847;n t&#7917; &#273;&#7847;u ti&ecirc;n v&agrave;o danh s&aacute;ch li&ecirc;n k&#7871;t L r&#7895;ng c&oacute; &ocirc; &#273;&#7847;u m&#7909;c th&igrave;</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_6-0 start" start="1">
+        <li class="c5"><span class="c0">L lu&ocirc;n lu&ocirc;n thay &#273;&#7893;i</span></li>
+        <li class="c5"><span class="c0">L c&oacute; th&#7875; thay &#273;&#7893;i</span></li>
+        <li class="c5"><span class="c9">L lu&ocirc;n lu&ocirc;n kh&ocirc;ng &#273;&#7893;i</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="8">
+        <li class="c6 c10"><span class="c0">V&#7883; tr&iacute; &#273;&#7875; th&ecirc;m ph&#7847;n t&#7917; v&agrave;o h&agrave;ng l&agrave;</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_7-0 start" start="1">
+        <li class="c5"><span class="c0">V&#7883; tr&iacute; &#273;&#7847;u h&agrave;ng</span></li>
+        <li class="c5"><span class="c9">V&#7883; tr&iacute; cu&#7889;i h&agrave;ng</span></li>
+        <li class="c5"><span class="c0">V&#7883; tr&iacute; b&#7845;t k&#7923; trong h&agrave;ng </span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="9">
+        <li class="c6 c10"><span class="c0">Khi x&oacute;a ph&#7847;n t&#7917; ra kh&#7887;i danh s&aacute;ch &#273;&#7863;c L kh&ocirc;ng r&#7895;ng th&igrave; ta ph&#7843;i lu&ocirc;n lu&ocirc;n th&#7921;c hi&#7879;n c&acirc;u l&#7879;nh:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_8-0 start" start="1">
+        <li class="c7 c10 c32"><span>L.Last--;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;b.</span><span class="c27">&nbsp;L-&gt;Last--</span><span class="c0">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. L-&gt;Last++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. T&#7845;t c&#7843; &#273;&#7873;u sai</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="10">
+        <li class="c6 c10"><span class="c0">Gi&aacute; tr&#7883; bi&#7875;u th&#7913;c h&#7853;u t&#7889; 1, 2, -, 3, 4, +, *, 7, 6, 5, -, *, / l&agrave;:</span></li>
+    </ol>
+    <p class="c4"><span class="c27">a. -1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. M&#7897;t gi&aacute; tr&#7883; kh&aacute;c</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="11">
+        <li class="c6 c10"><span class="c0">L&#7845;y n&#7897;i dung ph&#7847;n t&#7917; t&#7841;i v&#7883; tr&iacute; p trong danh s&aacute;ch li&ecirc;n k&#7871;t k&eacute;p L kh&ocirc;ng c&oacute; &ocirc; &#273;&#7847;u m&#7909;c ta th&#7921;c hi&#7879;n l&#7879;nh:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_9-0 start" start="1">
+        <li class="c5"><span class="c0">return L-&gt;Element;</span></li>
+        <li class="c5"><span class="c0">return L-&gt;Next-&gt;Element;</span></li>
+        <li class="c5"><span class="c9">return p-&gt;Element;</span></li>
+        <li class="c5"><span class="c0">return p-&gt;Next-&gt;Element;</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="12">
+        <li class="c6 c10"><span class="c0">Sau khi th&ecirc;m ph&#7847;n t&#7917; X v&agrave;o v&#7883; tr&iacute; p trong danh s&aacute;ch &#273;&#7863;c L, ta lu&ocirc;n lu&ocirc;n c&oacute; m&#7879;nh &#273;&#7873; sau l&agrave; &#273;&uacute;ng:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">L.Elements[p-1]==X;</span></li>
+        <li class="c2"><span class="c0">L.Elements[p]==X;</span></li>
+        <li class="c2"><span class="c0">L.Elements[p+1]==X;</span></li>
+        <li class="c2"><span class="c9">T&#7845;t c&#7843; &#273;&#7873;u sai.</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="13">
+        <li class="c6 c10"><span class="c0">&nbsp;Khi th&ecirc;m ph&#7847;n t&#7917; X v&agrave;o b&#7843;ng b&#259;m m&#7903;, ta s&#7869; xen ph&#7847;n t&#7917; &#273;&oacute; v&agrave;o &#273;&#7847;u c&#7911;a danh s&aacute;ch &#7903; v&#7883; tr&iacute;:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">Bucket 0.</span></li>
+        <li class="c2"><span class="c0">Bucket B-1</span></li>
+        <li class="c2"><span class="c0">Bucket b&#7845;t k&#7923;</span></li>
+        <li class="c2"><span class="c9">Bucket H(X)</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="14">
+        <li class="c6 c10"><span class="c0">Cho h&agrave;ng c&agrave;i &#273;&#7863;t b&#7857;ng m&#7843;ng t&#7883;nh ti&#7871;n nh&#432; sau:</span></li>
+    </ol>
+    <p class="c1"><span class="c0"></span></p>
+    <a id="t.2bb6bbda3aad13cc89c0fe5403347fb5566034d4"></a>
+    <a id="t.0"></a>
+    <table class="c22 c31">
+        <tbody>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">Front</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 33.00px; height: 2.67px;"><img alt="" src="images/image12.png" style="width: 33.00px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">A</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">B</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">Rear</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 31.80px; height: 2.67px;"><img alt="" src="images/image9.png" style="width: 31.80px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">C</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="c7 c20"><span class="c0">H&igrave;nh &#7843;nh h&agrave;ng sau khi th&ecirc;m ph&#7847;n t&#7917; E, F v&agrave; x&oacute;a &#273;i 1 ph&#7847;n t&#7917; l&agrave;:</span></p>
+    <a id="t.68f5e996818a2612eeb1365cfb686e6755464635"></a>
+    <a id="t.1"></a>
+    <table class="c11 c22">
+        <tbody>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">Front</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 24.73px; height: 2.67px;"><img alt="" src="images/image1.png" style="width: 24.73px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+                        <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 29.47px; height: 2.67px;"><img alt="" src="images/image3.png" style="width: 29.47px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">A</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">B</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">Front</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 24.73px; height: 2.67px;"><img alt="" src="images/image1.png" style="width: 24.73px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+                        <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 29.47px; height: 2.67px;"><img alt="" src="images/image3.png" style="width: 29.47px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">B</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">Front</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 24.73px; height: 2.67px;"><img alt="" src="images/image1.png" style="width: 24.73px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">A</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">Front</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 24.73px; height: 2.67px;"><img alt="" src="images/image1.png" style="width: 24.73px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+                        <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 29.47px; height: 2.67px;"><img alt="" src="images/image3.png" style="width: 29.47px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">B</span></p>
+                </td>
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">E</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">C</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">B</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">C</span></p>
+                </td>
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">Rear</span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">F</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">E</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">E</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">E</span></p>
+                </td>
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">Rear</span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">F</span></p>
+                </td>
+            </tr>
+            <tr class="c16">
+                <td class="c3" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">Rear</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 29.47px; height: 2.67px;"><img alt="" src="images/image3.png" style="width: 29.47px; height: 2.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">F</span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14"><span class="c0">Rear</span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c7"><span class="c0">F</span></p>
+                </td>
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+                <td class="c15" colspan="1" rowspan="1">
+                    <p class="c14 c21"><span class="c0"></span></p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c1"><span class="c0"></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="c4"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; b.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;c.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="c9">d.</span>
+    </p>
+    <ol class="c8 lst-kix_list_1-0" start="15">
+        <li class="c6 c10"><span class="c0">Khi th&ecirc;m ph&#7847;n t&#7917; v&agrave;o danh s&aacute;ch &#273;&#7863;c kh&ocirc;ng &#273;&#7847;y, ta lu&ocirc;n lu&ocirc;n ph&#7843;i th&#7921;c hi&#7879;n l&#7879;nh</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">L.Last++;</span></li>
+        <li class="c2"><span class="c9">L-&gt;Last ++;</span></li>
+        <li class="c2"><span class="c0">L-&gt;Last--;</span></li>
+        <li class="c2"><span class="c0">T&#7845;t c&#7843; &#273;&#7873;u sai</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="16">
+        <li class="c6 c10"><span class="c0">Khi x&oacute;a ph&#7847;n t&#7917; ra kh&#7887;i h&agrave;ng c&agrave;i &#273;&#7863;t b&#7857;ng m&#7843;ng v&ograve;ng th&igrave;</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">Front lu&ocirc;n lu&ocirc;n thay &#273;&#7893;i v&agrave; Rear lu&ocirc;n lu&ocirc;n kh&ocirc;ng &#273;&#7893;i</span></li>
+        <li class="c2"><span class="c0">Front lu&ocirc;n lu&ocirc;n thay &#273;&#7893;i v&agrave; Rear c&oacute; th&#7875; thay &#273;&#7893;i</span></li>
+        <li class="c2"><span class="c9">Front c&oacute; th&#7875; thay &#273;&#7893;i v&agrave; Rear c&oacute; th&#7875; thay &#273;&#7893;i</span></li>
+        <li class="c2"><span class="c0">Front c&oacute; th&#7875; thay &#273;&#7893;i v&agrave; Rear lu&ocirc;n lu&ocirc;n kh&ocirc;ng &#273;&#7893;i</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="17">
+        <li class="c6 c10"><span class="c0">V&#7883; tr&iacute; ph&#7847;n t&#7917; c&#7847;n x&oacute;a ra kh&#7887;i danh s&aacute;ch &#273;&#7863;c trong ph&eacute;p to&aacute;n Delete_List (p,L) ch&#7881; h&#7907;p l&#7879; khi: </span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span>0 </span><span class="c0">&le; p &le; L.Last</span></li>
+        <li class="c2"><span class="c0">0 &lt; p &le; L.Last+1</span></li>
+        <li class="c2"><span class="c0">1&le; p &le; L.Last+1</span></li>
+        <li class="c2"><span class="c9">1&le;p&lt; L.Last+1 </span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="18">
+        <li class="c6 c10"><span class="c0">Cho c&acirc;y t&#7893;ng qu&aacute;t v&#7899;i nh&atilde;n l&agrave; c&aacute;c s&#7889; nguy&ecirc;n nh&#432; sau:</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 288.87px; height: 156.00px;"><img alt="" src="images/image10.png" style="width: 288.87px; height: 156.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></li>
+    </ol>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c7 c20"><span class="c0">B&#7853;c c&#7911;a c&acirc;y l&agrave;:</span></p>
+    <p class="c7 c20"><span>&nbsp; &nbsp; &nbsp; &nbsp; a. 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="c27">c. 3</span><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. 4</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="19">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t theo m&#7913;c c&#7911;a c&acirc;y &#7903; c&acirc;u 18 l&agrave;:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">24, 1, 34, 20, 29, 75, 5, 25, 27, 95, 45, 80, 12, 52, 21, 30</span></li>
+        <li class="c2"><span class="c0">1, 34, 5, 25, 24, 20, 29, 27, 12, 95, 52, 45, 75, 80, 21, 30</span></li>
+        <li class="c2"><span class="c9">30. 12, 52, 21, 5, 25, 27, 95, 45, 80, 1, 34, 20, 29, 75, 24</span></li>
+        <li class="c2"><span class="c0">T&#7845;t c&#7843; &#273;&#7873;u sai</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="20">
+        <li class="c6 c10"><span class="c0">C&acirc;y t&igrave;m ki&#7871;m nh&#7883; ph&acirc;n l&agrave; c&acirc;y nh&#7883; ph&acirc;n v&#7899;i</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">Nh&atilde;n c&#7911;a n&uacute;t l&#7899;n h&#417;n nh&atilde;n c&#7911;a n&uacute;t con tr&aacute;i v&agrave; nh&#7887; h&#417;n nh&atilde;n c&#7911;a n&uacute;t con ph&#7843;i</span></li>
+        <li class="c2"><span class="c0">Nh&atilde;n c&#7911;a n&uacute;t l&#7899;n h&#417;n nh&atilde;n c&#7911;a n&uacute;t con ph&#7843;i v&agrave; nh&#7887; h&#417;n nh&atilde;n c&#7911;a n&uacute;t con tr&aacute;i</span></li>
+        <li class="c2"><span class="c9">Nh&atilde;n c&#7911;a n&uacute;t l&#7899;n h&#417;n nh&atilde;n c&#7911;a t&#7845;t c&#7843; c&aacute;c n&uacute;t &#7903; c&acirc;y con tr&aacute;i v&agrave; nh&#7887; h&#417;n nh&atilde;n c&#7911;a t&#7845;t c&#7843; c&aacute;c n&uacute;t &#7903; c&acirc;y con ph&#7843;i</span></li>
+        <li class="c2"><span class="c0">Nh&atilde;n c&#7911;a n&uacute;t l&#7899;n h&#417;n nh&atilde;n c&#7911;a t&#7845;t c&#7843; c&aacute;c n&uacute;t &#7903; c&acirc;y con ph&#7843;i v&agrave; nh&#7887; h&#417;n nh&atilde;n c&#7911;a t&#7845;t c&#7843; c&aacute;c n&uacute;t &#7903; c&acirc;y con tr&aacute;i</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="21">
+        <li class="c6 c10"><span class="c0">&nbsp;Trong ch&#432;&#417;ng tr&igrave;nh ch&iacute;nh, &#273;&#7875; th&ecirc;m ph&#7847;n t&#7917; x v&agrave;o cu&#7889;i danh s&aacute;ch L ta th&#7921;c hi&#7879;n l&#7901;i g&#7885;i nh&#432; sau:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_10-0 start" start="1">
+        <li class="c5"><span class="c0">InsertList (x, Last(L), L);</span></li>
+        <li class="c5"><span class="c0">InsertList (x, Last(*L),L);</span></li>
+        <li class="c5"><span class="c0">InsertList (x, EndList(&amp;L),&amp;L);</span></li>
+        <li class="c5"><span class="c9">InsertList (x, EndList(L),&amp;L);</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="22">
+        <li class="c6 c10"><span class="c0">Khi x&oacute;a n&uacute;t 27 ra kh&#7887;i c&acirc;y t&igrave;m ki&#7871;m nh&#7883; ph&acirc;n, ta th&#7921;c hi&#7879;n nh&#432; sau:</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 230.00px; height: 156.00px;"><img alt="" src="images/image13.png" style="width: 230.00px; height: 156.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></li>
+    </ol>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <ol class="c8 lst-kix_list_10-1 start" start="1">
+        <li class="c5"><span class="c0">Thay n&uacute;t 27 b&#7903;i n&uacute;t 24 v&agrave; quay v&#7873; x&oacute;a n&uacute;t 24.</span></li>
+        <li class="c5"><span class="c0">Thay n&uacute;t 27 b&#7903;i n&uacute;t 20 v&agrave; quay v&#7873; x&oacute;a n&uacute;t 20.</span></li>
+        <li class="c5"><span class="c9">Cho con ph&#7843;i c&#7911;a n&uacute;t 12 tr&#7887; xu&#7889;ng n&uacute;t 20.</span></li>
+        <li class="c5"><span class="c0">Cho con ph&#7843;i c&#7911;a n&uacute;t 12 tr&#7887; xu&#7889;ng n&uacute;t 24. </span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="23">
+        <li class="c6 c10"><span class="c0">S&#7889; b&#432;&#7899;c c&#7847;n duy&#7879;t &#273;&#7875; t&igrave;m n&uacute;t 25 tr&ecirc;n c&acirc;y &#7903; c&acirc;u 23 theo gi&#7843;i thu&#7853;t Search(x,T) l&agrave;:</span></li>
+    </ol>
+    <p class="c4"><span>a. 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="c27">d. 6</span>
+    </p>
+    <ol class="c8 lst-kix_list_1-0" start="24">
+        <li class="c6 c10"><span class="c0">X&oacute;a n&uacute;t 52 tr&ecirc;n c&acirc;y &#7903; c&acirc;u 23, ta c&#7847;n:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">Thay n&uacute;t 52 b&#7903;i n&uacute;t 37 v&agrave; quay v&#7873; x&oacute;a n&uacute;t 37.</span></li>
+        <li class="c2"><span class="c9">Thay n&uacute;t 52 b&#7903;i n&uacute;t 40 v&agrave; quay v&#7873; x&oacute;a n&uacute;t 40.</span></li>
+        <li class="c2"><span class="c0">Thay n&uacute;t 52 b&#7903;i n&uacute;t 80 v&agrave; quay v&#7873; x&oacute;a n&uacute;t 80.</span></li>
+        <li class="c2"><span class="c0">T&#7845;t c&#7843; &#273;&#7873;u &#273;&uacute;ng</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="25">
+        <li class="c6 c10"><span class="c0">Th&ecirc;m n&uacute;t 42 v&agrave;o c&acirc;y &#7903; c&acirc;u 22, ta th&#7921;c hi&#7879;n:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">Kh&ocirc;ng th&ecirc;m &#273;&#432;&#7907;c</span></li>
+        <li class="c2"><span class="c0">G&#7855;n n&uacute;t 42 v&agrave;o con ph&#7843;i c&#7911;a 37.</span></li>
+        <li class="c2"><span class="c0">G&#7855;n n&uacute;t 42 v&agrave;o con tr&aacute;i c&#7911;a 75.</span></li>
+        <li class="c2"><span class="c9">G&#7855;n n&uacute;t 42 v&agrave;o con ph&#7843;i c&#7911;a 40.</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="26">
+        <li class="c6 c10"><span class="c0">H&atilde;y cho bi&#7871;t thao t&aacute;c n&agrave;o kh&ocirc;ng &#273;&#432;&#7907;c ph&eacute;p d&ugrave;ng tr&ecirc;n c&#7845;u tr&uacute;c ng&#259;n x&#7871;p</span></li>
+    </ol>
+    <p class="c7 c11"><span class="c0">a. Th&ecirc;m m&#7897;t ph&#7847;n t&#7917; v&agrave;o &#273;&#7881;nh ng&#259;n x&#7871;p.</span></p>
+    <p class="c7 c11"><span class="c0">b. X&oacute;a m&#7897;t ph&#7847;n t&#7917; &#7903; v&#7883; tr&iacute; b&#7845;t k&igrave; kh&#7887;i ng&#259;n x&#7871;p.</span></p>
+    <p class="c7 c11"><span class="c0">c. Th&ecirc;m m&#7897;t ph&#7847;n t&#7917; v&agrave;o v&#7883; tr&iacute; b&#7845;t k&igrave; trong ng&#259;n x&#7871;p.</span></p>
+    <p class="c7 c11"><span class="c9">d. C&#7843; b v&agrave; c.</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="27">
+        <li class="c6 c10"><span class="c0">Cho bi&#7875;u th&#7913;c trung t&#7889;: (a * (5 + b) &ndash; 2 * c) + 4, bi&#7875;u th&#7913;c n&agrave;o sau &#273;&acirc;y l&agrave; d&#7841;ng h&#7853;u t&#7889; c&#7911;a n&oacute; ?</span></li>
+    </ol>
+    <p class="c4"><span class="c0">a. &nbsp;a 5 * b + 2 &ndash; c * 4 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. &nbsp;a 5 b + * 2 &ndash; c * 4 +</span></p>
+    <p class="c4"><span class="c27">c. &nbsp;a 5 b + * 2 c * - 4 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. &nbsp;T&#7845;t c&#7843; &#273;&#7873;u sai </span></p>
+    <ol class="c8 lst-kix_list_1-0" start="28">
+        <li class="c6 c10"><span class="c0">Cho danh danh s&aacute;ch li&ecirc;n k&#7871;t </span></li>
+    </ol>
+    <p class="c7"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 56.47px;"><img alt="" src="images/image14.png" style="width: 624.00px; height: 56.47px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+    <p class="c1"><span class="c18"></span></p>
+    <p class="c1"><span class="c18"></span></p>
+    <p class="c6"><span class="c0">Ssau khi th&#7921;c hi&#7879;n t&#7853;p l&#7879;nh</span></p>
+    <p class="c7 c25"><span class="c0">p=First(Header);</span></p>
+    <p class="c7 c25"><span class="c0">while (p-&gt;next!=q){</span></p>
+    <p class="c7 c25 c28"><span class="c0">printf(&ldquo;%c &ldquo;,p-&gt;next-&gt;data);</span></p>
+    <p class="c7 c25 c28"><span class="c0">p=p-&gt;next;</span></p>
+    <p class="c7 c25"><span class="c0">&nbsp; }</span></p>
+    <p class="c6"><span class="c0">K&#7871;t qu&#7843; tr&ecirc;n m&agrave;n h&igrave;nh l&agrave;:</span></p>
+    <p class="c6"><span class="c0">a) X &nbsp;Y &nbsp;Z &nbsp;T &nbsp;U</span></p>
+    <p class="c6"><span class="c0">b) X &nbsp;Y &nbsp;Z &nbsp; T &nbsp;</span></p>
+    <p class="c6"><span class="c9">c) X &nbsp;Y &nbsp;Z &nbsp; </span></p>
+    <p class="c6"><span class="c0">d) Y &nbsp;Z &nbsp; T</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="29">
+        <li class="c6 c10"><span>Cho b&#7843;ng b&#259;m &#273;&oacute;ng v&#7899;i s&#7889; bucket B=10 v&agrave; h&agrave;m b&#259;m h(x)= x mod B v&agrave; gi&#7843;i quy&#7871;t &#273;&#7909;ng &#273;&#7897; b&#7857;ng ph&#432;&#417;ng ph&aacute;p b&#259;m l&#7841;i b&igrave;nh ph&#432;&#417;ng (h(x)= (x+i</span>
+            <span class="c36">2</span><span class="c0">) mod B). K&#7871;t qu&#7843; b&#7843;ng b&#259;m sau khi th&#7921;c hi&#7879;n c&aacute;c thao t&aacute;c th&ecirc;m 3, 5, 9, 12, 15, 16, 25 l&agrave;:</span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 76.00px; height: 193.00px;"><img alt="" src="images/image5.png" style="width: 76.00px; height: 193.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+            <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 85.00px; height: 193.00px;"><img alt="" src="images/image11.png" style="width: 85.00px; height: 193.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+            <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 91.00px; height: 193.00px;"><img alt="" src="images/image8.png" style="width: 91.00px; height: 193.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                                            title=""></span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 97.00px; height: 193.00px;"><img alt="" src="images/image4.png" style="width: 97.00px; height: 193.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></li>
+    </ol>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c1 c20"><span class="c0"></span></p>
+    <p class="c7 c20"><span class="c0">&nbsp; &nbsp; &nbsp;a) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b) &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="c9">&nbsp; c) &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="c0">&nbsp; &nbsp; &nbsp; d)</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="30">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t h&#7853;u t&#7921; c&#7911;a c&acirc;y nh&#7883; ph&acirc;n cho b&#7903;i c&#7863;p danh s&aacute;ch duy&#7879;t sau</span></li>
+    </ol>
+    <p class="c7 c20"><span class="c0">NLR: &nbsp;A, B, C, D, G, E, F &nbsp; &nbsp; v&agrave; &nbsp; LNR: C, B, D, G, A, E, F &nbsp; l&agrave;:</span></p>
+    <ol class="c8 lst-kix_list_14-0 start" start="1">
+        <li class="c5"><span class="c0">C, B, G, E, D, A, F</span></li>
+        <li class="c5"><span class="c9">C, G, D, B, F, E, A</span></li>
+        <li class="c5"><span class="c0">C, G, D, B, E, F, A</span></li>
+        <li class="c5"><span class="c0">C&#7863;p danh s&aacute;ch &#273;&atilde; cho kh&ocirc;ng h&#7907;p l&#7879;.</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="31">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t m&#7897;t c&acirc;y nh&#7883; ph&acirc;n theo ph&#432;&#417;ng ph&aacute;p duy&#7879;t trung t&#7921; nh&#7883; ph&acirc;n v&agrave; trung t&#7921; t&#7893;ng qu&aacute;t lu&ocirc;n lu&ocirc;n kh&aacute;c nhau khi v&agrave; ch&#7881; khi</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span>C&oacute; t&#7891;n t&#7841;i n&uacute;t b&#7883; khuy&#7871;t con tr&aacute;i tr&ecirc;n c&acirc;y</span></li>
+        <li class="c2"><span>C&oacute; t&#7891;n t&#7841;i n&uacute;t b&#7883; khuy&#7871;t con ph&#7843;i tr&ecirc;n c&acirc;y</span></li>
+        <li class="c2"><span class="c9">C&oacute; t&#7891;n t&#7841;i n&uacute;t c&oacute; con ph&#7843;i v&agrave; b&#7883; khuy&#7871;t con tr&aacute;i tr&ecirc;n c&acirc;y.</span></li>
+        <li class="c2"><span>C&oacute; t&#7891;n t&#7841;i n&uacute;t c&oacute; con tr&aacute;i v&agrave; b&#7883; khuy&#7871;t con ph&#7843;i tr&ecirc;n c&acirc;y</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="32">
+        <li class="c6 c10"><span class="c0">Cho danh s&aacute;ch li&ecirc;n k&#7871;t sau&nbsp;:</span></li>
+    </ol>
+    <p class="c7"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 504.20px; height: 45.60px;"><img alt="" src="images/image15.png" style="width: 504.20px; height: 45.60px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+    <p class="c7"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 75.53px; height: 31.47px;"><img alt="" src="images/image2.png" style="width: 75.53px; height: 31.47px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+        <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 2.67px; height: 14.00px;"><img alt="" src="images/image16.png" style="width: 2.67px; height: 14.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>
+    </p>
+    <p class="c1"><span class="c18"></span></p>
+    <p class="c1"><span class="c18"></span></p>
+    <p class="c7 c11"><span class="c18">p3-&gt;Next-&gt;Next = p1-&gt;Next;</span></p>
+    <p class="c7 c11"><span class="c18">L-&gt;Next = p3-&gt;Next;</span></p>
+    <p class="c7 c11"><span class="c18">p1-&gt;Next = NULL;</span></p>
+    <p class="c7 c11"><span class="c18">p3-&gt;Next = p1;</span></p>
+    <p class="c7 c11"><span class="c18">p1-&gt;Element=Retrieve(p3,L);</span></p>
+    <p class="c7 c11"><span class="c18">PrintList(L); // H</span><span class="c23 c34">&agrave;m in danh s&aacute;ch ra m&agrave;n h&igrave;nh</span></p>
+    <p class="c7 c11"><span class="c18">K&#7871;t qu&#7843; hi&#7875;n th&#7883; tr&ecirc;n m&agrave;n h&igrave;nh l&agrave;:</span></p>
+    <p class="c7 c28"><span class="c18">a. REAB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. BEAR</span></p>
+    <p class="c7 c28"><span class="c9">c. REAR</span><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. M&#7897;t danh s&aacute;ch kh&aacute;c</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="33">
+        <li class="c6 c10"><span class="c0">Khi th&ecirc;m ph&#7847;n t&#7917; v&agrave;o h&agrave;ng c&agrave;i &#273;&#7863;t b&#7857;ng m&#7843;ng v&ograve;ng kh&ocirc;ng r&#7895;ng th&igrave;:</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c0">Front lu&ocirc;n lu&ocirc;n kh&ocirc;ng &#273;&#7893;i v&agrave; Rear lu&ocirc;n lu&ocirc;n thay &#273;&#7893;i</span></li>
+        <li class="c2"><span class="c9">Front lu&ocirc;n lu&ocirc;n kh&ocirc;ng &#273;&#7893;i v&agrave; Rear c&oacute; th&#7875; thay &#273;&#7893;i</span></li>
+        <li class="c2"><span class="c0">Front c&oacute; th&#7875; thay &#273;&#7893;i v&agrave; Rear lu&ocirc;n lu&ocirc;n thay &#273;&#7893;i</span></li>
+        <li class="c2"><span class="c0">Front c&oacute; th&#7875; thay &#273;&#7893;i v&agrave; Rear c&oacute; th&#7875; thay &#273;&#7893;i</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="34">
+        <li class="c6 c10"><span class="c0">Danh s&aacute;ch duy&#7879;t trung t&#7921; t&#7893;ng qu&aacute;t c&#7911;a c&acirc;y nh&#7883; ph&acirc;n cho b&#7903;i hai danh s&aacute;ch </span></li>
+    </ol>
+    <p class="c7 c20"><span class="c18">&nbsp; LRN: 5, 6, 4, 2, 9, 10, 8, 7, 3, 1 v&agrave; LNR: 2, 5, 4, 6, 1, 7, 9, 8, 10, 3 &nbsp;l&agrave;</span></p>
+    <ol class="c8 lst-kix_list_15-0 start" start="1">
+        <li class="c7 c10 c13"><span class="c18">5, 4, 2, 6, 1, 9, 8, 10, 3, 7</span></li>
+        <li class="c7 c13 c10"><span class="c19 c37">5, 4, 6, 2, 1, 9, 8, 10, 7, 3</span></li>
+        <li class="c7 c13 c10"><span class="c18">2, 5, 4, 6, 3, 1, 8, 7, 9, 10</span></li>
+        <li class="c7 c13 c10"><span class="c18">4, 5, 6, 2, 1, 3, 7, 9, 8, 10</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="35">
+        <li class="c6 c10"><span class="c23">C&acirc;y &#7903; c&acirc;u 35 c&oacute; s&#7889; n&uacute;t trung gian l&agrave;:</span></li>
+    </ol>
+    <p class="c4"><span class="c23">a. &nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c19">b. 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. 7</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="36">
+        <li class="c6 c10"><span class="c23">C&acirc;y &#7903; c&acirc;u 35 c&oacute; n&uacute;t 7 l&agrave; n&uacute;t</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-1 start" start="1">
+        <li class="c2"><span class="c18">N&uacute;t l&aacute;</span></li>
+        <li class="c2"><span class="c23">N&uacute;t trung gian c&oacute; 2 con</span></li>
+        <li class="c2"><span class="c19">N&uacute;t trung gian c&oacute; 1 con ph&#7843;i</span></li>
+        <li class="c2"><span class="c23">N&uacute;t trung gian c&oacute; 1 con tr&aacute;i </span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="37">
+        <li class="c6 c10"><span class="c0">Chi&#7873;u cao c&#7911;a c&acirc;y &#7903; c&acirc;u 35 l&agrave;:</span></li>
+    </ol>
+    <p class="c4"><span>a. 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="c27">c. 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. 5</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="38">
+        <li class="c6 c10"><span class="c0">H&agrave;m sau &#273;&#432;&#7907;c thi&#7871;t k&#7871; trong danh s&aacute;ch li&ecirc;n k&#7871;t v&#7899;i n&#7897;i dung l&agrave;:</span></li>
+    </ol>
+    <p class="c7 c11"><span>Position </span><span class="c30">NONAME</span><span class="c0">&nbsp;(ElementType x, List L)</span></p>
+    <p class="c7 c11"><span class="c0">{ &nbsp;Position p=First(L);</span></p>
+    <p class="c7 c11"><span class="c0">&nbsp; &nbsp; while (p!= Endlist(L))</span></p>
+    <p class="c7 c11"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (Retrieve (P,L)==x) &nbsp; &nbsp; &nbsp; return 1;</span></p>
+    <p class="c7 c11"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else &nbsp; &nbsp; &nbsp; p=Next(p,L);</span></p>
+    <p class="c7 c11"><span class="c0">&nbsp; &nbsp; return 0;</span></p>
+    <p class="c7 c11"><span class="c0">}</span></p>
+    <p class="c7 c11"><span class="c0">H&agrave;m n&agrave;y th&#7921;c hi&#7879;n &#273;&#432;&#7907;c kh&ocirc;ng v&agrave; l&agrave;m nhi&#7879;m v&#7909; g&igrave;?</span></p>
+    <ol class="c8 lst-kix_list_16-0 start" start="1">
+        <li class="c5"><span class="c0">H&agrave;m tr&#7843; v&#7873; t&igrave;m v&#7883; tr&iacute; ph&#7847;n t&#7917; &#273;&#7847;u c&oacute; n&#7897;i dung l&agrave; x. </span></li>
+        <li class="c5"><span class="c9">H&agrave;m tr&ecirc;n b&#7883; l&#7895;i &#7903; ki&#7875;u d&#7919; li&#7879;u tr&#7843; v&#7873; cho h&agrave;m.</span></li>
+        <li class="c5"><span class="c0">H&agrave;m ki&#7875;m tra xem c&oacute; ph&#7847;n t&#7917; X trong danh s&aacute;ch hay kh&ocirc;ng.</span></li>
+        <li class="c5"><span class="c0">H&agrave;m lu&ocirc;n tr&#7843; v&#7873; gi&aacute; tr&#7883; 0.</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_1-0" start="39">
+        <li class="c6 c10"><span class="c0">Nguy&ecirc;n t&#7855;c l&agrave;m vi&#7879;c c&#7911;a ng&#259;n x&#7871;p l&agrave;:</span></li>
+    </ol>
+    <p class="c4"><span>a. FIFO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="c9">b. FILO</span>
+    </p>
+    <p class="c4"><span class="c0">c. LILO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. C&acirc;u a v&agrave; c c&ugrave;ng &#273;&uacute;ng.</span></p>
+    <ol class="c8 lst-kix_list_1-0" start="40">
+        <li class="c6 c10"><span class="c0">C&acirc;y AVL l&agrave; c&acirc;y g&igrave;?</span></li>
+    </ol>
+    <ol class="c8 lst-kix_list_19-0 start" start="1">
+        <li class="c7 c10 c26"><span class="c0">C&acirc;y c&acirc;n b&#7857;ng ho&agrave;n to&agrave;n</span></li>
+        <li class="c7 c26 c10" id="h.gjdgxs"><span class="c0">C&acirc;y c&acirc;n b&#7857;ng t&#432;&#417;ng &#273;&#7889;i</span></li>
+        <li class="c7 c26 c10"><span class="c0">C&acirc;y t&igrave;m ki&#7871;m nh&#7883; ph&acirc;n c&acirc;n b&#7857;ng ho&agrave;n to&agrave;n.</span></li>
+        <li class="c7 c26 c10"><span class="c0">C&acirc;y t&igrave;m ki&#7871;m nh&#7883; ph&acirc;n c&acirc;n b&#7857;ng t&#432;&#417;ng &#273;&#7889;i.</span></li>
+    </ol>
+    <p class="c4 c21"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+</body>
+
+</html>
